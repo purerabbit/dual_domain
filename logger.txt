@@ -1,0 +1,13 @@
+2022-10-03 15:58:52,555 main.py [line:293] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-03 15:58:52,590 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-03 15:58:52,590 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-03 15:58:52,922 main.py [line:319] INFO:	Initialize model with xavier.
+2022-10-03 15:59:00,711 main.py [line:361] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-03 16:00:43,118 main.py [line:293] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-03 16:00:43,159 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-03 16:00:43,160 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-03 16:00:43,491 main.py [line:319] INFO:	Initialize model with xavier.
+2022-10-03 16:47:32,347 main.py [line:293] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-03 16:47:32,382 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-03 16:47:32,382 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-03 16:47:32,710 main.py [line:319] INFO:	Initialize model with xavier.
