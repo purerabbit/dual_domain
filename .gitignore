@@ -1,5 +1,7 @@
 *.npz
 checkpoints/
+train_image_results/
+runs/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

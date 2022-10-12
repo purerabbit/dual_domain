@@ -45,9 +45,9 @@ def datasets2loaders(datasets: Sequence[Data.Dataset],
 
 
 def build_loader(dataset, batch_size,
-                 train_indices=np.arange(0, 600),
-                 val_indices=np.arange(600, 800),
-                 test_indices=np.arange(800, 1000),
+                 train_indices=np.arange(0,900),
+                 val_indices=np.arange(900, 950),
+                 test_indices=np.arange(950, 1000),
                  num_workers=4):
     """
     :return: train/validation/test loader
@@ -108,12 +108,13 @@ def np_undersample(k0, mask_centered):
     output: x_u, k_u (H, W)
     """
     assert k0.shape == mask_centered.shape
+    # assert k0.dtype == torch.Tensor
     # print('k0.dtype:',k0.dtype)
     if isinstance(k0, torch.Tensor):
         k0 = k0.type(torch.complex64)
     else:
         k0 = k0.astype(np.complex64)
-    print('after-k0.dtype:',k0.dtype)
+    # print('after-k0.dtype:',k0.dtype)
 
     k_u = k0 * mask_centered
     x_u = kspace2image(k_u)
@@ -207,10 +208,10 @@ class DatasetReconMRI(Data.Dataset):
         return self.n_slices
 
 
-if __name__ == '__main__':
-    dataset = FastmriKnee('./data/knee_singlecoil_1000.npz')
-    print(len(dataset))
-    k_und, und_mask, im_gt = dataset[123]
-    print(f"{k_und.shape} {k_und.dtype}")
-    print(f"{und_mask.shape} {und_mask.dtype}")
-    print(f"{im_gt.shape} {im_gt.dtype}")
+# if __name__ == '__main__':
+#     dataset = FastmriKnee('./data/knee_singlecoil_1000_nor.npz')
+#     print(len(dataset))
+#     k_und, und_mask, im_gt = dataset[123]
+#     print(f"{k_und.shape} {k_und.dtype}")
+#     print(f"{und_mask.shape} {und_mask.dtype}")
+#     print(f"{im_gt.shape} {im_gt.dtype}")

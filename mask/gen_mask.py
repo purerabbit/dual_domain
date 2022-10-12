@@ -2,6 +2,8 @@ import numpy as np
 import numpy as np
 import sys
 from numpy.lib.stride_tricks import as_strided
+import torch
+
 
 def norm(tensor, axes=(0, 1, 2), keepdims=True):
     """
@@ -138,7 +140,7 @@ def uniform_selection( input_data, input_mask, num_iter=1):#input_data->kspace  
     if num_iter == 0:
         print(f'\n Uniformly random selection is processing, rho = {rho:.2f}, center of kspace: center-kx: {center_kx}, center-ky: {center_ky}')
     #input_mask如何确定？
-    temp_mask = np.copy(input_mask)
+    temp_mask = np.copy(input_mask.cpu())
     temp_mask[center_kx - small_acs_block[0] // 2: center_kx + small_acs_block[0] // 2,
     center_ky - small_acs_block[1] // 2: center_ky + small_acs_block[1] // 2] = 0
 
@@ -148,13 +150,15 @@ def uniform_selection( input_data, input_mask, num_iter=1):#input_data->kspace  
     
     #实现原来欠采样的mask上进行采样
     [ind_x, ind_y] = index_flatten2nd(ind, (nrow, ncol))
-
-    loss_mask = np.zeros_like(input_mask)
+    # print('input_mask:')
+    # assert isinstance(input_mask,torch.Tensor)
+    inpumak=input_mask.cpu().data.numpy()
+    loss_mask = np.zeros_like(inpumak)
     # print('input_mask.shape:',input_mask.shape)#input_mask.shape: (1, 256, 256)
     
     loss_mask[ind_x, ind_y] = 1
 
-    trn_mask = input_mask - loss_mask
+    trn_mask = input_mask.cpu().data.numpy() - loss_mask
 
     return trn_mask, loss_mask
 

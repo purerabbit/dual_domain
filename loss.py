@@ -37,8 +37,7 @@ def cal_loss(y,y1,y2,yu,x,x1,x2,xu):
     L_img=lossl1(x,x1)+lossl1(x,x2)+lossl1(x1,x2)
     L_grad=cal_grad_lossv(xu,x1)+cal_grad_lossv(xu,x2)+cal_grad_lossv(x1,x2)+cal_grad_lossh(xu,x1)+cal_grad_lossh(xu,x2)+cal_grad_lossh(x1,x2)
     L_ac=2*L_img+L_grad
-
+  
     #total loss
     L_tot=10*L_pdc+L_ac
-    print('----------------------L_tot:',L_tot)
     return L_tot
