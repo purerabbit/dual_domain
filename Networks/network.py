@@ -23,7 +23,8 @@ class ParallelNetwork(nn.Module):
         )
 
     def forward(self, under_img_up, under_img_down,under_img,mask):
-        output_up = self.net(under_img_up,under_img,mask)
+        # output_up = self.net(under_img_up,under_img,mask)
         output_mid=self.net(under_img,under_img,mask)
-        output_down = self.net(under_img_down,under_img,mask)
-        return output_up, output_down,output_mid
+        # output_down = self.net(under_img_down,under_img,mask)
+        # return output_up, output_down,output_mid
+        return  output_mid

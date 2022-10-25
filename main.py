@@ -74,7 +74,8 @@ parser.add_argument('--train-sample-rate', '-trsr', type=float, default=0.06, he
 parser.add_argument('--val-sample-rate', '-vsr', type=float, default=0.02, help='sampling rate of validation data')
 parser.add_argument('--test-sample-rate', '-tesr', type=float, default=0.02, help='sampling rate of test data')
 # save path
-parser.add_argument('--model-save-path', type=str, default='./checkpoints/', help='save path of trained model')
+# parser.add_argument('--model-save-path', type=str, default='./checkpoints/', help='save path of trained model')
+parser.add_argument('--model-save-path', type=str, default='/home/liuchun/dual_domain/checkpoints', help='save path of trained model')
 parser.add_argument('--loss-curve-path', type=str, default='./runs/loss_curve/', help='save path of loss curve in tensorboard')
 # others
 parser.add_argument('--mode', '-m', type=str, default='train', help='whether training or test model, value should be set to train or test')
@@ -220,7 +221,8 @@ def forward(mode, rank, model, dataloader, criterion, optimizer, log, args):
         if mode == 'test':
             net_img_up = net_img_down = under_img
             select_mask_up = select_mask_down = und_mask
-        output_up, output_down,output_mid = model(net_img_up.contiguous(), net_img_down.contiguous(),under_img.contiguous(),und_mask.contiguous())#output class 设成1
+        # output_up, output_down,output_mid = model(net_img_up.contiguous(), net_img_down.contiguous(),under_img.contiguous(),und_mask.contiguous())#output class 设成1
+        output_up = model(net_img_up.contiguous(), net_img_down.contiguous(),under_img.contiguous(),und_mask.contiguous())#output class 设成1
         # output_up, output_down= model(net_img_up.contiguous(), net_img_down.contiguous(),under_img.contiguous(),und_mask.contiguous())#output class 设成1
         
         #保存图像结果部分
@@ -233,11 +235,11 @@ def forward(mode, rank, model, dataloader, criterion, optimizer, log, args):
             print(im_gt1.shape,pseudo2real(under_img).squeeze().shape,output_up1.shape) 
             img_show=torch.cat((im_gt1,pseudo2real(under_img).squeeze(),output_up1),0)
             count=iter_num+count
-            save_image(img_show,f'/home/liuchun/dual_domain/save_results/{count}.png')
-
+            save_image(img_show,f'/home/liuchun/dual_domain/save_results/image_show_3601/{count}.png')
+                                # /home/liuchun/dual_domain/save_results/image_show_former
         output_up_kspace = complex2pseudo(image2kspace(pseudo2complex(output_up)))
-        output_down_kspace = complex2pseudo(image2kspace(pseudo2complex(output_down)))
-        output_mid_kspace = complex2pseudo(image2kspace(pseudo2complex(output_mid)))
+        # output_down_kspace = complex2pseudo(image2kspace(pseudo2complex(output_down)))
+        # output_mid_kspace = complex2pseudo(image2kspace(pseudo2complex(output_mid)))
         gt_kspace = complex2pseudo(image2kspace(pseudo2complex(im_gt)))
 
         # SSDU loss
@@ -264,7 +266,7 @@ def forward(mode, rank, model, dataloader, criterion, optimizer, log, args):
         # batch_loss=cal_loss(y,y1,y2,yu,x,x1,x2,xu)
 
         # #supervised loss
-        batch_loss=criterion(output_up_kspace, gt_kspace)+criterion(output_mid_kspace, gt_kspace)+criterion(output_down_kspace, gt_kspace)
+        batch_loss=criterion(output_up_kspace, gt_kspace)#+criterion(output_mid_kspace, gt_kspace)+criterion(output_down_kspace, gt_kspace)
         # batch_loss=criterion(output_up_kspace, k_und)+criterion(output_mid_kspace, k_und)+criterion(output_down_kspace, k_und)
 
         # if batch_loss<0.1:
@@ -293,8 +295,10 @@ def forward(mode, rank, model, dataloader, criterion, optimizer, log, args):
             optimizer.step()
         else:
             #评估指标
-            ssim+=compute_ssim(output_up,im_gt)
-            psnr+=compute_psnr(output_up,im_gt)
+            # ssim+=compute_ssim(output_up,im_gt)
+            # psnr+=compute_psnr(output_up,im_gt)
+            ssim+=compute_ssim(pseudo2real(output_up),pseudo2real(im_gt))
+            psnr+=compute_psnr(pseudo2real(output_up),pseudo2real(im_gt))
            
         loss += batch_loss.item()
     loss /= len(dataloader)
@@ -307,7 +311,8 @@ def forward(mode, rank, model, dataloader, criterion, optimizer, log, args):
         result.to_excel("ssim_psnr_new.xlsx",float_format='%.5f')
 
     if mode == 'train':
-        curr_lr = optimizer.param_groups[0]['initial_lr']
+        # curr_lr = optimizer.param_groups[0]['initial_lr']
+        curr_lr = 0.0001
         log.append(curr_lr)
     else:
         psnr /= len(dataloader)
@@ -361,7 +366,7 @@ def solvers(rank, ngpus_per_node, args):
     # criterion, optimizer, learning rate scheduler
     #损失函数部分 根据论文进行改变
     criterion = nn.MSELoss()
-    optimizer = optim.Adam(model.parameters(), lr=args.lr)
+    optimizer = optim.Adam(model.parameters(), lr=args.lr,weight_decay=1e-5)
     if not args.pretrained:
         warm_up = lambda epoch: epoch / args.warmup_epochs if epoch <= args.warmup_epochs else 1
         scheduler_wu = torch.optim.lr_scheduler.LambdaLR(optimizer=optimizer, lr_lambda=warm_up)
@@ -369,7 +374,7 @@ def solvers(rank, ngpus_per_node, args):
     early_stopping = EarlyStopping(patience=50, delta=1e-5)
 
     #数据集部分
-    dataset1 = FastmriKnee('/home/liuchun/dual_domain/data/knee_singlecoil_train_6300_n.npz')
+    dataset1 = FastmriKnee('/home/liuchun/dual_domain/data/knee_singlecoil_360.npz')
     # print('dataset1:',len(dataset1))
     dataset=DatasetReconMRI(dataset1)
     # print('dataset:',len(dataset))
@@ -441,6 +446,7 @@ def solvers(rank, ngpus_per_node, args):
             model_path = os.path.join(args.model_save_path, 'checkpoint.pth.tar')
             best_model_path = os.path.join(args.model_save_path, 'best_checkpoint.pth.tar')
             torch.save(checkpoint, model_path)
+            print('save the checkpoints successfully!')
             if is_best:
                 shutil.copy(model_path, best_model_path)
         # scheduler

@@ -326,8 +326,8 @@ def compute_ssim(reconstructed_im, target_im, is_minmax=False):
         reconstructed_im = minmax_normalize(reconstructed_im, eps)
         target_im = minmax_normalize(target_im, eps)
   
-    target_im1=target_im.transpose(0,2,3,1)
-    reconstructed_im1=reconstructed_im.transpose(0,2,3,1)
+    target_im1=target_im#.transpose(0,2,3,1)
+    reconstructed_im1=reconstructed_im#.transpose(0,2,3,1)
     # print('ssim-target_im.shape:',target_im.shape)#1,2,256,256
     # print('ssim-reconstructed_im.shape:',reconstructed_im.shape)#1,2,256,256
     # reconstructed_im=reconstructed_im[0,:,:,0]

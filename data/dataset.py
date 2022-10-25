@@ -46,9 +46,9 @@ def datasets2loaders(datasets: Sequence[Data.Dataset],
 
 
 def build_loader(dataset, batch_size,
-                 train_indices=np.arange(0,4500),
-                 val_indices=np.arange(4500, 6000),
-                 test_indices=np.arange(6000, 6300),
+                 train_indices=np.arange(0,300),
+                 val_indices=np.arange(300,330),
+                 test_indices=np.arange(330, 360),
                  num_workers=4):
     """
     :return: train/validation/test loader
@@ -165,7 +165,7 @@ class FastmriKnee(Data.Dataset):
 
 
 class DatasetReconMRI(Data.Dataset):
-    def __init__(self, dataset: Data.Dataset, acc=4.0, num_center_lines=12, augment_fn=None):
+    def __init__(self, dataset: Data.Dataset, acc=4.0, num_center_lines=24, augment_fn=None):
         """
         :param augment_fn: perform augmentation on image data [C=2, H, W] if provided.
         """
