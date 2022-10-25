@@ -10,7 +10,8 @@ from numpy.lib.stride_tricks import as_strided
 import torch
 from torch.utils import data as Data
 
-from data.utils import kspace2image, image2kspace, complex2pseudo, pseudo2real, pseudo2complex
+# from data.utils import kspace2image, image2kspace, complex2pseudo, pseudo2real, pseudo2complex
+from .utils import kspace2image, image2kspace, complex2pseudo, pseudo2real, pseudo2complex
 
 
 # =============================================================================
@@ -45,13 +46,14 @@ def datasets2loaders(datasets: Sequence[Data.Dataset],
 
 
 def build_loader(dataset, batch_size,
-                 train_indices=np.arange(0,900),
-                 val_indices=np.arange(900, 950),
-                 test_indices=np.arange(950, 1000),
+                 train_indices=np.arange(0,4500),
+                 val_indices=np.arange(4500, 6000),
+                 test_indices=np.arange(6000, 6300),
                  num_workers=4):
     """
     :return: train/validation/test loader
     """
+    print('dataset.__len__:',dataset.__len__)
     datasets = arbitrary_dataset_split(dataset, [train_indices, val_indices, test_indices])
     loaders = datasets2loaders(datasets, batch_size=(batch_size,) * 3, is_shuffle=(True, False, False),
                                num_workers=num_workers)
@@ -158,6 +160,7 @@ class FastmriKnee(Data.Dataset):
         return im_gt  # [2, Nxy, Nxy] float32
 
     def __len__(self):
+        # print('self.n_slices-FastmriKnee:',self.n_slices)
         return self.n_slices
 
 
@@ -205,6 +208,7 @@ class DatasetReconMRI(Data.Dataset):
         )
 
     def __len__(self):
+        # print('self.n_slices-DatasetReconMRI',self.n_slices)
         return self.n_slices
 
 

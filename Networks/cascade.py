@@ -13,8 +13,8 @@ class DataConsistencyLayer(nn.Module):
         self.is_data_fidelity = is_data_fidelity
         self.cnn=UNet(n_channels=2, n_classes=2, bilinear=False)
         if is_data_fidelity:
-            # self.data_fidelity = nn.Parameter(torch.tensor(1.0,dtype=torch.float32))
-            self.data_fidelity = nn.Parameter(torch.ones((1,1),dtype=torch.float32))
+            self.data_fidelity = nn.Parameter(torch.tensor(1.0,dtype=torch.float32))
+            # self.data_fidelity = nn.Parameter(torch.ones((1,1),dtype=torch.float32))
 
     def forward(self, im_recon, k0, mask):
         """
@@ -31,7 +31,7 @@ class DataConsistencyLayer(nn.Module):
             im_dc = im_dc*self.data_fidelity
             # print('self.data_fidelity:',self.data_fidelity)
             im_cnn= self.cnn(im_recon)
-            im_recon=im_recon-im_dc-im_cnn 
+            im_recon=im_recon-im_dc+im_cnn #按照公式将-改成+
            
         else:
             print('wrong!,set is_data_fidelity=True')
@@ -52,7 +52,7 @@ class CascadeMRIReconstructionFramework(nn.Module):
     def forward(self, im_und,init_unimg, mask):
         B, C, H, W = im_und.shape
         assert C == 2
-        assert (B, H, W) == tuple(mask.shape)
+        # assert (B, H, W) == tuple(mask.shape)
         k_und = complex2pseudo(image2kspace(pseudo2complex(init_unimg)))
         im_recon = im_und
         

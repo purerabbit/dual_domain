@@ -19,7 +19,7 @@ class ParallelNetwork(nn.Module):
         #cascade：input->recon_net: nn.Module, n_cascade: int
         #       forward_want:k_und, mask   mask is
         self.net = CascadeMRIReconstructionFramework(
-            n_cascade=5
+            n_cascade=10  #the formor is 5
         )
 
     def forward(self, under_img_up, under_img_down,under_img,mask):

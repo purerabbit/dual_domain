@@ -1,4 +1,5 @@
 import torch.nn as nn
+from data.utils import *
 #3 type of loss
 '''
 Lpdc=||Ypred1-y||1 + ||Ypred2-y||1 +||Ypredu-y||1
@@ -12,10 +13,10 @@ input:Y(pred_1,pred_2,pred_u),X_p1,X_p2,X_u
 '''
 #input(B,C,H,W)
 def cal_gradv(x):
-    v_grad =x[:,:,1:,:]-x[:,:,:-1,:]
+    v_grad =x[:,1:,:]-x[:,:-1,:]
     return v_grad
 def cal_gradh(x):
-    h_grad =x[:,:,:,1:]-x[:,:,:,:-1]
+    h_grad =x[:,:,1:]-x[:,:,:-1]
     return h_grad
 def cal_grad_lossv(a,b):
     av=cal_gradv(a)
@@ -29,6 +30,12 @@ def cal_grad_lossh(a,b):
     return lossl1(ah,bh)
 
 def cal_loss(y,y1,y2,yu,x,x1,x2,xu):
+    x=torch.abs(pseudo2complex(x))
+    x1=torch.abs(pseudo2complex(x1))
+    x2=torch.abs(pseudo2complex(x2))
+    xu=torch.abs(pseudo2complex(xu))
+    
+    
     lossl1=nn.L1Loss()
     #k_space loss
     L_pdc=lossl1(y1,y)+lossl1(y2,y)+lossl1(yu,y)
