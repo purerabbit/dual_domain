@@ -43,8 +43,13 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0'#单GPU进行训练
 parser = argparse.ArgumentParser()
 parser.add_argument('--exp-name', type=str, default='self-supervised MRI reconstruction', help='name of experiment')
 # parameters related to distributed training
+<<<<<<< HEAD
 parser.add_argument('--init-method', default=f'tcp://localhost:{np.random.randint(1000,2000)}', help='initialization method')
 # parser.add_argument('--init-method', default=f'tcp://localhost:1883', help='initialization method')
+=======
+# parser.add_argument('--init-method', default=f'tcp://localhost:{np.random.randint(1000,2000)}', help='initialization method')
+parser.add_argument('--init-method', default=f'tcp://localhost:1883', help='initialization method')
+>>>>>>> 9451285a496f76460e62711338dd5a1412bdca4c
 parser.add_argument('--nodes', type=int, default=1, help='number of nodes')
 parser.add_argument('--gpus', type=int, default=1, help='number of gpus per node')#放到一块GPU上进行训练
 parser.add_argument('--world-size', type=int, default=None, help='world_size = nodes * gpus')
@@ -74,7 +79,8 @@ parser.add_argument('--train-sample-rate', '-trsr', type=float, default=0.06, he
 parser.add_argument('--val-sample-rate', '-vsr', type=float, default=0.02, help='sampling rate of validation data')
 parser.add_argument('--test-sample-rate', '-tesr', type=float, default=0.02, help='sampling rate of test data')
 # save path
-parser.add_argument('--model-save-path', type=str, default='./checkpoints/', help='save path of trained model')
+# parser.add_argument('--model-save-path', type=str, default='./checkpoints/', help='save path of trained model')
+parser.add_argument('--model-save-path', type=str, default='/home/liuchun/dual_domain/checkpoints', help='save path of trained model')
 parser.add_argument('--loss-curve-path', type=str, default='./runs/loss_curve/', help='save path of loss curve in tensorboard')
 # others
 parser.add_argument('--mode', '-m', type=str, default='train', help='whether training or test model, value should be set to train or test')
@@ -224,12 +230,83 @@ def forward(mode, rank, model, dataloader, criterion, optimizer, log, args):
         if mode == 'test':
             net_img_up = net_img_down = under_img
             select_mask_up = select_mask_down = und_mask
+<<<<<<< HEAD
          
         output_mid = model(net_img_up.contiguous(), net_img_down.contiguous(),under_img.contiguous(),und_mask.contiguous())#output class 设成1
        
         
         batch_loss=criterion(torch.abs(pseudo2complex(output_mid)),torch.abs(pseudo2complex(im_gt)))
        
+=======
+        # output_up, output_down,output_mid = model(net_img_up.contiguous(), net_img_down.contiguous(),under_img.contiguous(),und_mask.contiguous())#output class 设成1
+        output_up = model(net_img_up.contiguous(), net_img_down.contiguous(),under_img.contiguous(),und_mask.contiguous())#output class 设成1
+        # output_up, output_down= model(net_img_up.contiguous(), net_img_down.contiguous(),under_img.contiguous(),und_mask.contiguous())#output class 设成1
+        
+        #保存图像结果部分
+        if mode=='test':
+            itt=output_up.shape[0]
+            dimt=output_up.shape[2]
+            count=iter_num*itt*dimt      
+            im_gt1=im_gt[0,0,:,:]       
+            output_up1=output_up[0,0,:,:]  
+            print(im_gt1.shape,pseudo2real(under_img).squeeze().shape,output_up1.shape) 
+            img_show=torch.cat((im_gt1,pseudo2real(under_img).squeeze(),output_up1),0)
+            count=iter_num+count
+            save_image(img_show,f'/home/liuchun/dual_domain/save_results/image_show_3601/{count}.png')
+                                # /home/liuchun/dual_domain/save_results/image_show_former
+        output_up_kspace = complex2pseudo(image2kspace(pseudo2complex(output_up)))
+        # output_down_kspace = complex2pseudo(image2kspace(pseudo2complex(output_down)))
+        # output_mid_kspace = complex2pseudo(image2kspace(pseudo2complex(output_mid)))
+        gt_kspace = complex2pseudo(image2kspace(pseudo2complex(im_gt)))
+
+        # SSDU loss
+        # diff_otherf = (output_up_kspace - output_down_kspace) * (1 - und_mask)
+        
+        # recon_loss_up=0.0
+        # recon_loss_down=0.0
+    
+        # # for i in range(nnt):
+        # output_up_kspace_mask=output_up_kspace * und_mask
+        # recon_loss_up=criterion(output_up_kspace_mask,under_kspace)#fully sampled/////////////////////////////
+        # output_down_kspace_mask = output_down_kspace * und_mask
+        # recon_loss_down = criterion(output_down_kspace_mask, under_kspace)#fully sampled/////////////////////////////
+        
+        # diff_loss = criterion(diff_otherf, torch.zeros_like(diff_otherf))
+        # # print('diff_loss*0,01:',diff_loss*0.01)
+        # batch_loss =recon_loss_up + recon_loss_down + 0.01 * diff_loss
+        # print(batch_loss)
+
+        # # dual domain loss
+        # y1,y2,yu,y=output_up_kspace* und_mask,output_down_kspace* und_mask,output_mid_kspace* und_mask,under_kspace
+        # x1,x2,xu,x= output_up,output_down,output_mid,under_img
+        
+        # batch_loss=cal_loss(y,y1,y2,yu,x,x1,x2,xu)
+
+        # #supervised loss
+        batch_loss=criterion(output_up_kspace, gt_kspace)#+criterion(output_mid_kspace, gt_kspace)+criterion(output_down_kspace, gt_kspace)
+        # batch_loss=criterion(output_up_kspace, k_und)+criterion(output_mid_kspace, k_und)+criterion(output_down_kspace, k_und)
+
+        # if batch_loss<0.1:
+        #     save_data=[]
+        #     print('save_image in this step')
+        #     img=torch.cat((im_gt[0,0,:,:],output_up[0,0,:,:],net_img_up[0,0,:,:],net_img_down[0,0,:,:],under_img[0,0,:,:]),0)
+        #     save_data.append(compute_ssim(im_gt,output_up))
+        #     save_data.append(compute_ssim(under_img,output_up))
+        #     save_data.append(compute_psnr(im_gt,output_up).item())
+        #     save_data.append(compute_psnr(under_img,output_up).item())
+        #     # save_data
+        #     # print('compute_ssim(im_gt,output_up):',compute_ssim(im_gt,output_up))
+        #     # print('compute_ssim(under_img,output_up):',compute_ssim(under_img,output_up))
+        #     # print('compute_psnr(im_gt,output_up):',compute_psnr(im_gt,output_up))
+        #     # print('compute_psnr(under_img,output_up):',compute_psnr(under_img,output_up))
+        #     save_excel.append(save_data)#总的保存数据中
+        #     save_image(img,f'/home/liuchun/dual_domain/train_image_results/final/{iter_num}.png')
+         #保存生成的数据
+        # if(save_excel!=[]):
+        #     print('come into save_excel')
+        #     result=pd.DataFrame(save_excel)
+        #     result.to_excel("ssim_psnr.xlsx",float_format='%.5f')
+>>>>>>> 9451285a496f76460e62711338dd5a1412bdca4c
         if mode == 'train':
             optimizer.zero_grad()
             batch_loss.backward()
@@ -239,6 +316,7 @@ def forward(mode, rank, model, dataloader, criterion, optimizer, log, args):
         else:
             
             #评估指标
+<<<<<<< HEAD
               # #保存图像结果部分    
             im_gt1=im_gt[0,0,:,:]       
             output_up1=output_mid[0,0,:,:]   
@@ -249,6 +327,12 @@ def forward(mode, rank, model, dataloader, criterion, optimizer, log, args):
 
             ssim+=compute_ssim(output_mid,im_gt)
             psnr+=compute_psnr(output_mid,im_gt)
+=======
+            # ssim+=compute_ssim(output_up,im_gt)
+            # psnr+=compute_psnr(output_up,im_gt)
+            ssim+=compute_ssim(pseudo2real(output_up),pseudo2real(im_gt))
+            psnr+=compute_psnr(pseudo2real(output_up),pseudo2real(im_gt))
+>>>>>>> 9451285a496f76460e62711338dd5a1412bdca4c
            
         loss += batch_loss.item()
     loss /= len(dataloader)
@@ -325,8 +409,12 @@ def solvers(rank, ngpus_per_node, args):
     early_stopping = EarlyStopping(patience=50, delta=1e-5)
 
     #数据集部分
+<<<<<<< HEAD
     # dataset1 = FastmriKnee('/home/liuchun/dual_net/dual_domain/data/knee_singlecoil_train_6300_n.npz')
     dataset1 = FastmriKnee('/home/liuchun/ssim_net/dual_domain/data/knee_singlecoil_360.npz')
+=======
+    dataset1 = FastmriKnee('/home/liuchun/dual_domain/data/knee_singlecoil_360.npz')
+>>>>>>> 9451285a496f76460e62711338dd5a1412bdca4c
     # print('dataset1:',len(dataset1))
     dataset=DatasetReconMRI(dataset1)
     # print('dataset:',len(dataset))
@@ -398,6 +486,7 @@ def solvers(rank, ngpus_per_node, args):
             model_path = os.path.join(args.model_save_path, 'checkpoint.pth.tar')
             best_model_path = os.path.join(args.model_save_path, 'best_checkpoint.pth.tar')
             torch.save(checkpoint, model_path)
+            print('save the checkpoints successfully!')
             if is_best:
                 shutil.copy(model_path, best_model_path)
         # scheduler

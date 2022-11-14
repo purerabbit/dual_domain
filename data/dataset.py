@@ -47,7 +47,11 @@ def datasets2loaders(datasets: Sequence[Data.Dataset],
 
 def build_loader(dataset, batch_size,
                  train_indices=np.arange(0,300),
+<<<<<<< HEAD
                  val_indices=np.arange(300, 330),
+=======
+                 val_indices=np.arange(300,330),
+>>>>>>> 9451285a496f76460e62711338dd5a1412bdca4c
                  test_indices=np.arange(330, 360),
                  num_workers=4):
     """
@@ -211,7 +215,11 @@ class DatasetReconMRI(Data.Dataset):
         )
 
     def __len__(self):
+<<<<<<< HEAD
          
+=======
+        # print('self.n_slices-DatasetReconMRI',self.n_slices)
+>>>>>>> 9451285a496f76460e62711338dd5a1412bdca4c
         return self.n_slices
 
 

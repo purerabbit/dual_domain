@@ -41,8 +41,12 @@ class DataConsistencyLayer(nn.Module):
             # im_recon_real=self.cnn_real(im_recon_real)
             # im_recon_img=self.cnn_img(im_recon_img)
             im_cnn= self.cnn(im_recon)
+<<<<<<< HEAD
             # im_cnn=torch.cat((im_recon_real,im_recon_img),dim=1)
             im_recon=im_recon-im_dc-im_cnn #按照公式将-改成+
+=======
+            im_recon=im_recon-im_dc+im_cnn #按照公式将-改成+
+>>>>>>> 9451285a496f76460e62711338dd5a1412bdca4c
            
         else:
             print('wrong!,set is_data_fidelity=True')

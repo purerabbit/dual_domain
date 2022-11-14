@@ -2,6 +2,8 @@
 checkpoints/
 train_image_results/
 runs/
+save_results/
+results/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
