@@ -24,16 +24,16 @@ def psnr_slice(gt, pred, maxval=None):
     PSNR = 0.0
     # PSNR1=0.0
     
-    for i in range(batch_size):
-        max_val = gt[i].max() if maxval is None else maxval  
-        # print('psnr-gt-shape:',gt.shape)
-        # print('psnr-pred-shape:',pred.shape)
-        # print('psnr-T:',T)
-        # print('psnr-batch_size:',batch_size)
-        # for j in range(T):
-        PSNR += peak_signal_noise_ratio(gt[i].squeeze(), pred[i].squeeze(), data_range=max_val)
-        # PSNR += PSNR1/T 
-        # PSNR1=0.0
+    # for i in range(batch_size):
+    max_val = gt.max() if maxval is None else maxval  
+    # print('psnr-gt-shape:',gt.shape)
+    # print('psnr-pred-shape:',pred.shape)
+    # print('psnr-T:',T)
+    # print('psnr-batch_size:',batch_size)
+    # for j in range(T):
+    PSNR += peak_signal_noise_ratio(gt .squeeze(), pred .squeeze(), data_range=max_val)
+    # PSNR += PSNR1/T 
+    # PSNR1=0.0
 
     return PSNR / batch_size
 
@@ -47,16 +47,16 @@ def ssim_slice(gt, pred, maxval=None):
 
     SSIM = 0.0
     # SSIM1 = 0.0
-    for i in range(batch_size):
+    # for i in range(batch_size):
         # print('ssim-gt-shape:',gt.shape)
         # print('ssim-pred-shape:',pred.shape)
         # print('ssim-T:',T)
         # print('ssim-batch_size:',batch_size)
-        max_val = gt[i].max() if maxval is None else maxval
-        # for j in range(T):
-        SSIM += structural_similarity(gt[i].squeeze(), pred[i].squeeze(), data_range=max_val,multichannel=True)
-        # SSIM += SSIM1/T
-        # SSIM1=0.0
+    max_val = gt .max() if maxval is None else maxval
+    # for j in range(T):
+    SSIM += structural_similarity(gt .squeeze(), pred .squeeze(), data_range=max_val,multichannel=True)
+    # SSIM += SSIM1/T
+    # SSIM1=0.0
 
     return SSIM / batch_size
 
@@ -300,13 +300,7 @@ def compute_ssim(reconstructed_im, target_im, is_minmax=False):
 
     WARNING: this method using skimage's implementation, DOES NOT SUPPORT GRADIENT
     """
-    # target_im= pseudo2real(target_im) # 将2channel理解成伪复数 现变换成1channel为了和输出进行比对 
-    # # target_im= target_im.unsqueeze(3)
-    # print('reconstructed_im.shape:',reconstructed_im.shape)#reconstructed_im.shape: torch.Size([1, 256, 256, 2])
-    # print('target_im.shape:',target_im.shape)#target_im.shape: torch.Size([1, 256, 256, 1])
-    # print('reconstructed_im.dtype:',reconstructed_im.dtype)
-    # print('target_im.dtype:',target_im.dtype)
-    # reconstructed_im=reconstructed_im.permute(0,2,3,1)
+    
     assert target_im.dtype == reconstructed_im.dtype and target_im.shape == reconstructed_im.shape, \
         'target_im and reconstructed_im is not compatible to compute SSIM metric'
 
@@ -328,9 +322,7 @@ def compute_ssim(reconstructed_im, target_im, is_minmax=False):
   
     target_im1=target_im.transpose(0,2,3,1)
     reconstructed_im1=reconstructed_im.transpose(0,2,3,1)
-    # print('ssim-target_im.shape:',target_im.shape)#1,2,256,256
-    # print('ssim-reconstructed_im.shape:',reconstructed_im.shape)#1,2,256,256
-    # reconstructed_im=reconstructed_im[0,:,:,0]
+   
     for i in range(target_im1.shape[0]):
         ssim_value = structural_similarity(target_im1[i], reconstructed_im1[i], \
             gaussian_weights=True, sigma=1.5, use_sample_covariance=True,multichannel=True,channel_axis=-1)

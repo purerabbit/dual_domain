@@ -297,3 +297,919 @@
 2022-10-13 00:11:20,735 main.py [line:336] INFO:	Current best ssim in train phase is 0.3388168516997155.
 2022-10-13 00:11:20,735 main.py [line:337] INFO:	The model is loaded.
 2022-10-13 00:11:25,844 main.py [line:387] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-13 09:41:07,083 main.py [line:311] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-13 09:41:07,118 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-13 09:41:07,118 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-13 09:41:07,403 main.py [line:341] INFO:	Initialize model with xavier.
+2022-10-13 09:41:13,289 main.py [line:387] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-13 09:47:01,531 main.py [line:413] INFO:	epoch:1       time:348.24027s	lr:0.00010000	train_loss:15875.8146398	val_loss:23248.3153125	val_psnr:-10.88933	val_ssim:0.00002
+2022-10-13 09:53:27,046 main.py [line:311] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-13 09:53:27,083 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-13 09:53:27,083 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-13 09:53:27,365 main.py [line:341] INFO:	Initialize model with xavier.
+2022-10-13 09:53:33,460 main.py [line:387] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-13 09:59:28,023 main.py [line:413] INFO:	epoch:1       time:354.56195s	lr:0.00010000	train_loss:17648.4479167	val_loss:18086.6275195	val_psnr:-10.63641	val_ssim:0.00013
+2022-10-13 10:05:19,223 main.py [line:413] INFO:	epoch:2       time:350.89139s	lr:0.00010000	train_loss:3342.0671670	val_loss:1358.3028076	val_psnr:4.93214	val_ssim:0.06959
+2022-10-13 10:11:09,904 main.py [line:413] INFO:	epoch:3       time:350.35963s	lr:0.00010000	train_loss:501.2041506	val_loss:840.1864096	val_psnr:5.30962	val_ssim:0.11656
+2022-10-13 10:16:59,778 main.py [line:413] INFO:	epoch:4       time:349.53641s	lr:0.00010000	train_loss:215.0267748	val_loss:708.6402937	val_psnr:4.34651	val_ssim:0.13689
+2022-10-13 10:22:50,150 main.py [line:413] INFO:	epoch:5       time:349.97479s	lr:0.00010000	train_loss:107.8723141	val_loss:188.4049432	val_psnr:12.22672	val_ssim:0.26362
+2022-10-13 10:28:40,582 main.py [line:413] INFO:	epoch:6       time:350.12087s	lr:0.00010000	train_loss:61.4060431	val_loss:110.1239368	val_psnr:16.67038	val_ssim:0.30759
+2022-10-13 10:34:31,676 main.py [line:413] INFO:	epoch:7       time:350.77444s	lr:0.00010000	train_loss:38.9234412	val_loss:208.4384692	val_psnr:16.19946	val_ssim:0.30398
+2022-10-13 10:40:22,073 main.py [line:413] INFO:	epoch:8       time:350.21304s	lr:0.00010000	train_loss:26.5448048	val_loss:150.9310600	val_psnr:13.40946	val_ssim:0.28283
+2022-10-13 10:46:12,672 main.py [line:413] INFO:	epoch:9       time:350.42035s	lr:0.00010000	train_loss:19.0818936	val_loss:1401.3426980	val_psnr:4.27130	val_ssim:0.17822
+2022-10-13 10:52:02,177 main.py [line:413] INFO:	epoch:10      time:349.34061s	lr:0.00010000	train_loss:15.0013929	val_loss:606.1277506	val_psnr:6.03470	val_ssim:0.21450
+2022-10-13 10:57:52,024 main.py [line:413] INFO:	epoch:11      time:349.68034s	lr:0.00010000	train_loss:12.6510162	val_loss:1593.9588281	val_psnr:0.17803	val_ssim:0.18165
+2022-10-13 11:03:41,729 main.py [line:413] INFO:	epoch:12      time:349.54152s	lr:0.00010000	train_loss:10.0810377	val_loss:238.8599632	val_psnr:8.55598	val_ssim:0.22474
+2022-10-13 11:09:31,819 main.py [line:413] INFO:	epoch:13      time:349.91846s	lr:0.00010000	train_loss:10.4575292	val_loss:1151.1044141	val_psnr:-2.27059	val_ssim:0.11441
+2022-10-13 11:15:21,713 main.py [line:413] INFO:	epoch:14      time:349.72234s	lr:0.00010000	train_loss:7.7502664	val_loss:1202.9667218	val_psnr:1.17638	val_ssim:0.14371
+2022-10-13 11:21:14,300 main.py [line:413] INFO:	epoch:15      time:352.41073s	lr:0.00010000	train_loss:6.6144823	val_loss:369.0182947	val_psnr:12.74727	val_ssim:0.27911
+2022-10-13 11:27:04,203 main.py [line:413] INFO:	epoch:16      time:349.73625s	lr:0.00010000	train_loss:6.2211404	val_loss:753.3350299	val_psnr:5.45385	val_ssim:0.19160
+2022-10-13 11:32:54,000 main.py [line:413] INFO:	epoch:17      time:349.62066s	lr:0.00010000	train_loss:6.3669429	val_loss:169.0426377	val_psnr:11.68060	val_ssim:0.23791
+2022-10-13 11:38:45,058 main.py [line:413] INFO:	epoch:18      time:350.87899s	lr:0.00010000	train_loss:5.3336588	val_loss:239.9140861	val_psnr:15.65346	val_ssim:0.30031
+2022-10-13 11:44:38,163 main.py [line:413] INFO:	epoch:19      time:352.94231s	lr:0.00010000	train_loss:5.1770695	val_loss:6.5397860	val_psnr:18.49582	val_ssim:0.33104
+2022-10-13 11:50:32,412 main.py [line:413] INFO:	epoch:20      time:353.99381s	lr:0.00010000	train_loss:4.9925409	val_loss:34.1320536	val_psnr:17.44762	val_ssim:0.32514
+2022-10-13 11:56:22,635 main.py [line:413] INFO:	epoch:21      time:350.08262s	lr:0.00010000	train_loss:3.9448636	val_loss:470.1774823	val_psnr:5.00434	val_ssim:0.15707
+2022-10-13 12:02:13,690 main.py [line:413] INFO:	epoch:22      time:350.87963s	lr:0.00010000	train_loss:5.2048268	val_loss:12.1463419	val_psnr:17.92305	val_ssim:0.32156
+2022-10-13 12:08:05,083 main.py [line:413] INFO:	epoch:23      time:351.24967s	lr:0.00010000	train_loss:3.9451837	val_loss:16.2184456	val_psnr:18.56721	val_ssim:0.33252
+2022-10-13 12:13:54,821 main.py [line:413] INFO:	epoch:24      time:349.44194s	lr:0.00010000	train_loss:3.6134337	val_loss:141.0580154	val_psnr:16.76732	val_ssim:0.30789
+2022-10-13 12:19:44,881 main.py [line:413] INFO:	epoch:25      time:349.87963s	lr:0.00010000	train_loss:3.7435187	val_loss:16.7449137	val_psnr:18.60854	val_ssim:0.33327
+2022-10-13 12:25:35,066 main.py [line:413] INFO:	epoch:26      time:349.88410s	lr:0.00010000	train_loss:3.5793549	val_loss:45.3504880	val_psnr:18.22425	val_ssim:0.31948
+2022-10-13 12:31:25,642 main.py [line:413] INFO:	epoch:27      time:350.42000s	lr:0.00010000	train_loss:3.4213615	val_loss:106.8246087	val_psnr:17.13552	val_ssim:0.28810
+2022-10-13 12:37:16,876 main.py [line:413] INFO:	epoch:28      time:351.07722s	lr:0.00010000	train_loss:2.9976469	val_loss:246.0378912	val_psnr:12.55849	val_ssim:0.23021
+2022-10-13 12:43:08,581 main.py [line:413] INFO:	epoch:29      time:351.52535s	lr:0.00010000	train_loss:2.9855705	val_loss:517.0069995	val_psnr:6.18746	val_ssim:0.18734
+2022-10-13 12:49:01,164 main.py [line:413] INFO:	epoch:30      time:352.40741s	lr:0.00010000	train_loss:2.8345249	val_loss:756.1781281	val_psnr:7.72857	val_ssim:0.21056
+2022-10-13 12:54:59,428 main.py [line:413] INFO:	epoch:31      time:358.08748s	lr:0.00010000	train_loss:2.6116266	val_loss:378.5541336	val_psnr:8.79450	val_ssim:0.24097
+2022-10-13 13:01:01,855 main.py [line:413] INFO:	epoch:32      time:362.26957s	lr:0.00010000	train_loss:2.5272143	val_loss:59.9849823	val_psnr:16.19886	val_ssim:0.29884
+2022-10-13 13:07:08,263 main.py [line:413] INFO:	epoch:33      time:366.25243s	lr:0.00010000	train_loss:2.4864446	val_loss:49.2768788	val_psnr:15.79038	val_ssim:0.29718
+2022-10-13 13:13:06,709 main.py [line:413] INFO:	epoch:34      time:358.29198s	lr:0.00010000	train_loss:2.7783846	val_loss:121.6811312	val_psnr:11.69312	val_ssim:0.18107
+2022-10-13 13:19:09,584 main.py [line:413] INFO:	epoch:35      time:362.70297s	lr:0.00010000	train_loss:2.4956086	val_loss:372.0399884	val_psnr:2.66274	val_ssim:0.12790
+2022-10-13 13:25:12,286 main.py [line:413] INFO:	epoch:36      time:362.53456s	lr:0.00010000	train_loss:2.5889967	val_loss:36.6531182	val_psnr:16.98735	val_ssim:0.27556
+2022-10-13 13:31:23,174 main.py [line:413] INFO:	epoch:37      time:370.72878s	lr:0.00010000	train_loss:2.3781599	val_loss:81.0439432	val_psnr:14.58987	val_ssim:0.26652
+2022-10-13 13:37:33,146 main.py [line:413] INFO:	epoch:38      time:369.80430s	lr:0.00010000	train_loss:2.4630325	val_loss:6.1154833	val_psnr:18.68579	val_ssim:0.33764
+2022-10-13 13:43:52,903 main.py [line:413] INFO:	epoch:39      time:379.48689s	lr:0.00010000	train_loss:2.2624122	val_loss:77.8029885	val_psnr:16.85460	val_ssim:0.31209
+2022-10-13 13:50:18,213 main.py [line:413] INFO:	epoch:40      time:385.07621s	lr:0.00010000	train_loss:2.2233964	val_loss:3.7423921	val_psnr:18.40664	val_ssim:0.33318
+2022-10-13 13:56:50,263 main.py [line:413] INFO:	epoch:41      time:391.90668s	lr:0.00010000	train_loss:2.1462069	val_loss:94.2918629	val_psnr:17.35810	val_ssim:0.30992
+2022-10-13 14:03:27,206 main.py [line:413] INFO:	epoch:42      time:396.78473s	lr:0.00010000	train_loss:2.0748224	val_loss:77.9826355	val_psnr:14.78225	val_ssim:0.28591
+2022-10-13 14:09:57,797 main.py [line:413] INFO:	epoch:43      time:390.43683s	lr:0.00010000	train_loss:2.2616699	val_loss:60.7034651	val_psnr:14.52890	val_ssim:0.27771
+2022-10-13 14:16:45,115 main.py [line:413] INFO:	epoch:44      time:407.16770s	lr:0.00010000	train_loss:1.9955797	val_loss:12.3477091	val_psnr:17.71861	val_ssim:0.31851
+2022-10-13 14:23:08,924 main.py [line:413] INFO:	epoch:45      time:383.67044s	lr:0.00010000	train_loss:2.2283383	val_loss:22.7496572	val_psnr:17.51470	val_ssim:0.31819
+2022-10-13 14:29:50,482 main.py [line:413] INFO:	epoch:46      time:401.41790s	lr:0.00010000	train_loss:2.0579990	val_loss:4.7906410	val_psnr:18.61346	val_ssim:0.33456
+2022-10-13 14:36:24,963 main.py [line:413] INFO:	epoch:47      time:394.34379s	lr:0.00010000	train_loss:2.2888105	val_loss:4.7133139	val_psnr:18.51454	val_ssim:0.32913
+2022-10-13 14:42:43,440 main.py [line:413] INFO:	epoch:48      time:378.34041s	lr:0.00010000	train_loss:2.2902366	val_loss:18.1813628	val_psnr:18.05466	val_ssim:0.30890
+2022-10-13 14:49:10,906 main.py [line:413] INFO:	epoch:49      time:387.31333s	lr:0.00010000	train_loss:2.2454287	val_loss:1.0423631	val_psnr:18.62686	val_ssim:0.33667
+2022-10-13 14:55:48,844 main.py [line:413] INFO:	epoch:50      time:397.80237s	lr:0.00010000	train_loss:2.0774744	val_loss:4.7520599	val_psnr:18.65365	val_ssim:0.33593
+2022-10-13 15:02:24,641 main.py [line:413] INFO:	epoch:51      time:395.58941s	lr:0.00010000	train_loss:2.0905055	val_loss:3.2594600	val_psnr:18.64369	val_ssim:0.33566
+2022-10-13 15:08:48,806 main.py [line:413] INFO:	epoch:52      time:384.02873s	lr:0.00010000	train_loss:2.1970441	val_loss:3.4962135	val_psnr:18.63760	val_ssim:0.33566
+2022-10-13 15:15:48,637 main.py [line:413] INFO:	epoch:53      time:419.69231s	lr:0.00010000	train_loss:1.9060200	val_loss:0.6988243	val_psnr:18.65889	val_ssim:0.33690
+2022-10-13 15:22:56,517 main.py [line:413] INFO:	epoch:54      time:427.74379s	lr:0.00010000	train_loss:1.7805603	val_loss:4.0696921	val_psnr:18.63047	val_ssim:0.33470
+2022-10-13 15:29:56,728 main.py [line:413] INFO:	epoch:55      time:420.07057s	lr:0.00010000	train_loss:1.8831898	val_loss:0.9067405	val_psnr:18.68165	val_ssim:0.33711
+2022-10-13 15:37:02,289 main.py [line:413] INFO:	epoch:56      time:425.42413s	lr:0.00010000	train_loss:1.8691442	val_loss:9.7550636	val_psnr:18.65825	val_ssim:0.33758
+2022-10-13 15:44:12,805 main.py [line:413] INFO:	epoch:57      time:430.37582s	lr:0.00010000	train_loss:1.7791055	val_loss:3.5886749	val_psnr:18.61685	val_ssim:0.33408
+2022-10-13 15:51:27,848 main.py [line:413] INFO:	epoch:58      time:434.90485s	lr:0.00010000	train_loss:1.7313927	val_loss:30.1864995	val_psnr:18.06709	val_ssim:0.31934
+2022-10-13 15:58:54,741 main.py [line:413] INFO:	epoch:59      time:446.73901s	lr:0.00010000	train_loss:1.5736921	val_loss:46.0496154	val_psnr:17.42582	val_ssim:0.31398
+2022-10-13 16:06:31,186 main.py [line:413] INFO:	epoch:60      time:456.28711s	lr:0.00010000	train_loss:0.8133816	val_loss:36.5784198	val_psnr:17.01759	val_ssim:0.31475
+2022-10-13 16:14:07,411 main.py [line:413] INFO:	epoch:61      time:456.07912s	lr:0.00010000	train_loss:0.8150615	val_loss:16.0328774	val_psnr:18.04716	val_ssim:0.32540
+2022-10-13 16:21:46,810 main.py [line:413] INFO:	epoch:62      time:459.25077s	lr:0.00010000	train_loss:0.8291751	val_loss:11.8984464	val_psnr:18.03738	val_ssim:0.32601
+2022-10-13 16:29:25,100 main.py [line:413] INFO:	epoch:63      time:458.15094s	lr:0.00010000	train_loss:0.8038578	val_loss:40.4906431	val_psnr:16.33039	val_ssim:0.30333
+2022-10-13 16:37:04,084 main.py [line:413] INFO:	epoch:64      time:458.82313s	lr:0.00010000	train_loss:0.8003657	val_loss:38.3632791	val_psnr:16.74688	val_ssim:0.31357
+2022-10-13 16:44:45,933 main.py [line:413] INFO:	epoch:65      time:461.70788s	lr:0.00010000	train_loss:0.7973646	val_loss:12.8157598	val_psnr:17.84346	val_ssim:0.32642
+2022-10-13 16:52:24,980 main.py [line:413] INFO:	epoch:66      time:458.90625s	lr:0.00010000	train_loss:0.7844356	val_loss:32.5954230	val_psnr:17.23397	val_ssim:0.31611
+2022-10-13 17:00:03,274 main.py [line:413] INFO:	epoch:67      time:458.15294s	lr:0.00010000	train_loss:0.7612299	val_loss:35.5624775	val_psnr:17.12943	val_ssim:0.31669
+2022-10-13 17:00:38,733 main.py [line:316] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-13 17:00:38,774 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-13 17:00:38,774 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-13 17:00:39,049 main.py [line:346] INFO:	Initialize model with xavier.
+2022-10-13 17:00:44,886 main.py [line:392] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-13 17:06:33,410 main.py [line:418] INFO:	epoch:1       time:348.52278s	lr:0.00010000	train_loss:1779485.5408333	val_loss:4531289.9950000	val_psnr:-8.68250	val_ssim:-0.00000
+2022-10-13 17:12:20,328 main.py [line:418] INFO:	epoch:2       time:346.73208s	lr:0.00010000	train_loss:194430.9365755	val_loss:268295.8581641	val_psnr:7.02054	val_ssim:0.02581
+2022-10-13 17:18:06,939 main.py [line:418] INFO:	epoch:3       time:346.34968s	lr:0.00010000	train_loss:17047.3836192	val_loss:97020.1416895	val_psnr:12.97614	val_ssim:0.10649
+2022-10-13 17:23:53,571 main.py [line:418] INFO:	epoch:4       time:346.37323s	lr:0.00010000	train_loss:5203.3839198	val_loss:50032.3468286	val_psnr:15.06907	val_ssim:0.15785
+2022-10-13 17:29:39,893 main.py [line:418] INFO:	epoch:5       time:345.78109s	lr:0.00010000	train_loss:2210.0024622	val_loss:37548.0273853	val_psnr:15.81474	val_ssim:0.21687
+2022-10-13 17:35:26,162 main.py [line:418] INFO:	epoch:6       time:345.98836s	lr:0.00010000	train_loss:1106.3363637	val_loss:24792.0469922	val_psnr:16.81582	val_ssim:0.24539
+2022-10-13 17:41:12,392 main.py [line:418] INFO:	epoch:7       time:345.95458s	lr:0.00010000	train_loss:622.4606508	val_loss:7341.7178178	val_psnr:18.02317	val_ssim:0.29520
+2022-10-13 17:46:59,104 main.py [line:418] INFO:	epoch:8       time:346.45070s	lr:0.00010000	train_loss:360.1494249	val_loss:9023.5848987	val_psnr:18.36444	val_ssim:0.30984
+2022-10-13 17:52:45,453 main.py [line:418] INFO:	epoch:9       time:346.07622s	lr:0.00010000	train_loss:213.8511322	val_loss:7216.2332573	val_psnr:18.32766	val_ssim:0.31095
+2022-10-13 17:58:32,075 main.py [line:418] INFO:	epoch:10      time:346.36080s	lr:0.00010000	train_loss:137.9632308	val_loss:27189.2752171	val_psnr:16.98332	val_ssim:0.28632
+2022-10-13 18:04:18,265 main.py [line:418] INFO:	epoch:11      time:346.00622s	lr:0.00010000	train_loss:87.4211938	val_loss:21311.1005496	val_psnr:17.29101	val_ssim:0.29670
+2022-10-13 18:10:03,879 main.py [line:418] INFO:	epoch:12      time:345.43801s	lr:0.00010000	train_loss:54.2154677	val_loss:5840.1929437	val_psnr:18.19367	val_ssim:0.31259
+2022-10-13 18:15:48,623 main.py [line:418] INFO:	epoch:13      time:344.48512s	lr:0.00010000	train_loss:35.8008066	val_loss:13459.8402536	val_psnr:17.70384	val_ssim:0.30082
+2022-10-13 18:21:33,101 main.py [line:418] INFO:	epoch:14      time:344.30547s	lr:0.00010000	train_loss:28.7246273	val_loss:20738.0560498	val_psnr:18.05700	val_ssim:0.32225
+2022-10-13 18:27:17,759 main.py [line:418] INFO:	epoch:15      time:344.39449s	lr:0.00010000	train_loss:20.4554878	val_loss:53851.9409115	val_psnr:16.92246	val_ssim:0.30635
+2022-10-13 20:09:14,292 main.py [line:316] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-13 20:09:14,333 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-13 20:09:14,333 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-13 20:09:15,536 main.py [line:339] INFO:	Load checkpoint at epoch 14.
+2022-10-13 20:09:15,536 main.py [line:340] INFO:	Current learning rate is 0.0001.
+2022-10-13 20:09:15,536 main.py [line:341] INFO:	Current best ssim in train phase is 0.32225055579275486.
+2022-10-13 20:09:15,536 main.py [line:342] INFO:	The model is loaded.
+2022-10-13 20:09:20,618 main.py [line:392] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-13 21:04:01,870 main.py [line:316] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-13 21:04:01,922 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-13 21:04:01,922 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-13 21:04:02,217 main.py [line:346] INFO:	Initialize model with xavier.
+2022-10-13 21:04:08,125 main.py [line:392] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-13 21:10:00,373 main.py [line:418] INFO:	epoch:1       time:352.24695s	lr:0.00010000	train_loss:1346.7517373	val_loss:2860.6762988	val_psnr:-12.43539	val_ssim:0.00003
+2022-10-13 21:15:52,315 main.py [line:418] INFO:	epoch:2       time:351.66419s	lr:0.00010000	train_loss:208.4024395	val_loss:371.5657710	val_psnr:-11.36697	val_ssim:0.00201
+2022-10-13 21:21:43,507 main.py [line:418] INFO:	epoch:3       time:350.92225s	lr:0.00010000	train_loss:39.0716700	val_loss:129.5746170	val_psnr:-1.83724	val_ssim:0.01761
+2022-10-13 21:27:34,428 main.py [line:418] INFO:	epoch:4       time:350.65031s	lr:0.00010000	train_loss:17.3629918	val_loss:285.7594903	val_psnr:-0.46524	val_ssim:0.05628
+2022-10-13 21:33:26,412 main.py [line:418] INFO:	epoch:5       time:351.71383s	lr:0.00010000	train_loss:9.7629363	val_loss:309.1520184	val_psnr:4.13445	val_ssim:0.12637
+2022-10-13 21:39:17,742 main.py [line:418] INFO:	epoch:6       time:351.07166s	lr:0.00010000	train_loss:6.3164703	val_loss:219.4698641	val_psnr:10.12148	val_ssim:0.22194
+2022-10-13 21:45:07,023 main.py [line:418] INFO:	epoch:7       time:349.01412s	lr:0.00010000	train_loss:4.3268016	val_loss:193.1082376	val_psnr:10.48515	val_ssim:0.25676
+2022-10-13 21:50:56,322 main.py [line:418] INFO:	epoch:8       time:349.04524s	lr:0.00010000	train_loss:3.1974917	val_loss:156.2582428	val_psnr:11.88083	val_ssim:0.28919
+2022-10-13 21:56:52,416 main.py [line:418] INFO:	epoch:9       time:355.76133s	lr:0.00010000	train_loss:2.7237748	val_loss:176.3697137	val_psnr:10.21057	val_ssim:0.27875
+2022-10-13 22:03:17,760 main.py [line:418] INFO:	epoch:10      time:385.17652s	lr:0.00010000	train_loss:2.1827783	val_loss:75.1649055	val_psnr:12.50695	val_ssim:0.27554
+2022-10-13 22:09:48,445 main.py [line:418] INFO:	epoch:11      time:390.50850s	lr:0.00010000	train_loss:2.1493737	val_loss:80.8589186	val_psnr:13.35049	val_ssim:0.29196
+2022-10-13 22:16:45,515 main.py [line:418] INFO:	epoch:12      time:416.82758s	lr:0.00010000	train_loss:1.8825725	val_loss:55.8488586	val_psnr:16.14113	val_ssim:0.31339
+2022-10-13 22:24:02,979 main.py [line:418] INFO:	epoch:13      time:437.19424s	lr:0.00010000	train_loss:1.5975515	val_loss:6.7133021	val_psnr:14.49585	val_ssim:0.28167
+2022-10-13 22:31:22,485 main.py [line:418] INFO:	epoch:14      time:439.35276s	lr:0.00010000	train_loss:1.5049466	val_loss:5.4559785	val_psnr:15.10327	val_ssim:0.29791
+2022-10-13 22:38:49,605 main.py [line:418] INFO:	epoch:15      time:446.98259s	lr:0.00010000	train_loss:1.4140719	val_loss:7.5698902	val_psnr:15.41181	val_ssim:0.30403
+2022-10-13 22:46:13,190 main.py [line:418] INFO:	epoch:16      time:443.44950s	lr:0.00010000	train_loss:1.3232957	val_loss:29.2534752	val_psnr:14.10674	val_ssim:0.27410
+2022-10-13 22:53:38,651 main.py [line:418] INFO:	epoch:17      time:445.30751s	lr:0.00010000	train_loss:1.2745182	val_loss:112.5692474	val_psnr:-5.15447	val_ssim:0.10633
+2022-10-13 23:01:03,482 main.py [line:418] INFO:	epoch:18      time:444.65773s	lr:0.00010000	train_loss:1.2543468	val_loss:110.8340751	val_psnr:0.94773	val_ssim:0.15165
+2022-10-13 23:08:37,920 main.py [line:418] INFO:	epoch:19      time:454.26556s	lr:0.00010000	train_loss:1.1715871	val_loss:0.6580176	val_psnr:18.58199	val_ssim:0.33458
+2022-10-13 23:16:18,974 main.py [line:418] INFO:	epoch:20      time:460.82118s	lr:0.00010000	train_loss:1.0394363	val_loss:20.9736336	val_psnr:12.98366	val_ssim:0.23758
+2022-10-13 23:23:57,757 main.py [line:418] INFO:	epoch:21      time:458.61870s	lr:0.00010000	train_loss:1.0676358	val_loss:15.2044805	val_psnr:15.34470	val_ssim:0.27281
+2022-10-13 23:31:38,037 main.py [line:418] INFO:	epoch:22      time:460.12264s	lr:0.00010000	train_loss:1.0262742	val_loss:15.2247034	val_psnr:16.69441	val_ssim:0.29553
+2022-10-13 23:39:20,279 main.py [line:418] INFO:	epoch:23      time:462.08131s	lr:0.00010000	train_loss:1.0013913	val_loss:18.6720922	val_psnr:10.59686	val_ssim:0.21723
+2022-10-13 23:40:35,686 main.py [line:316] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-13 23:40:35,730 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-13 23:40:35,730 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-13 23:40:35,995 main.py [line:346] INFO:	Initialize model with xavier.
+2022-10-13 23:40:41,850 main.py [line:392] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-13 23:46:33,055 main.py [line:316] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-13 23:46:33,105 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-13 23:46:33,105 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-13 23:46:34,299 main.py [line:339] INFO:	Load checkpoint at epoch 19.
+2022-10-13 23:46:34,300 main.py [line:340] INFO:	Current learning rate is 0.0001.
+2022-10-13 23:46:34,300 main.py [line:341] INFO:	Current best ssim in train phase is 0.3345783609701054.
+2022-10-13 23:46:34,300 main.py [line:342] INFO:	The model is loaded.
+2022-10-13 23:46:39,160 main.py [line:392] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-13 23:54:30,201 main.py [line:316] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-13 23:54:30,242 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-13 23:54:30,242 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-13 23:54:30,529 main.py [line:346] INFO:	Initialize model with xavier.
+2022-10-13 23:54:36,498 main.py [line:392] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-14 00:00:29,059 main.py [line:418] INFO:	epoch:1       time:352.55878s	lr:0.00010000	train_loss:1895.2925601	val_loss:3292.0929590	val_psnr:-10.90662	val_ssim:0.00012
+2022-10-14 00:06:19,787 main.py [line:418] INFO:	epoch:2       time:350.44649s	lr:0.00010000	train_loss:242.3397559	val_loss:314.7336328	val_psnr:-16.46736	val_ssim:0.00100
+2022-10-14 00:12:10,615 main.py [line:418] INFO:	epoch:3       time:350.55267s	lr:0.00010000	train_loss:43.6613193	val_loss:120.0294097	val_psnr:-1.13767	val_ssim:0.01064
+2022-10-14 00:18:02,306 main.py [line:418] INFO:	epoch:4       time:351.39523s	lr:0.00010000	train_loss:19.0910558	val_loss:218.3185564	val_psnr:2.01415	val_ssim:0.04444
+2022-10-14 00:23:53,211 main.py [line:418] INFO:	epoch:5       time:350.54167s	lr:0.00010000	train_loss:11.2375501	val_loss:183.6786687	val_psnr:5.71621	val_ssim:0.11628
+2022-10-14 00:29:44,249 main.py [line:418] INFO:	epoch:6       time:350.76006s	lr:0.00010000	train_loss:7.5137000	val_loss:268.2524040	val_psnr:1.69273	val_ssim:0.18208
+2022-10-14 00:35:35,436 main.py [line:418] INFO:	epoch:7       time:350.90314s	lr:0.00010000	train_loss:5.6242788	val_loss:320.0180023	val_psnr:1.42429	val_ssim:0.22100
+2022-10-14 00:41:26,848 main.py [line:418] INFO:	epoch:8       time:351.12624s	lr:0.00010000	train_loss:4.3236886	val_loss:268.8568293	val_psnr:4.66664	val_ssim:0.25230
+2022-10-14 00:47:19,693 main.py [line:418] INFO:	epoch:9       time:352.59113s	lr:0.00010000	train_loss:3.7346078	val_loss:25.1207427	val_psnr:15.21202	val_ssim:0.30350
+2022-10-14 00:53:14,666 main.py [line:418] INFO:	epoch:10      time:354.71983s	lr:0.00010000	train_loss:3.3425265	val_loss:87.0358549	val_psnr:9.20386	val_ssim:0.26733
+2022-10-14 00:59:16,587 main.py [line:418] INFO:	epoch:11      time:361.76137s	lr:0.00010000	train_loss:2.8625268	val_loss:79.3888264	val_psnr:11.36400	val_ssim:0.26816
+2022-10-14 01:05:30,411 main.py [line:418] INFO:	epoch:12      time:373.65959s	lr:0.00010000	train_loss:2.5374716	val_loss:55.8017499	val_psnr:14.65831	val_ssim:0.31099
+2022-10-14 01:11:54,731 main.py [line:418] INFO:	epoch:13      time:384.04718s	lr:0.00010000	train_loss:2.3716614	val_loss:45.1747378	val_psnr:14.24383	val_ssim:0.30102
+2022-10-14 01:18:32,118 main.py [line:418] INFO:	epoch:14      time:397.22439s	lr:0.00010000	train_loss:2.2489543	val_loss:6.3337426	val_psnr:17.88505	val_ssim:0.32412
+2022-10-14 01:25:19,714 main.py [line:418] INFO:	epoch:15      time:407.32459s	lr:0.00010000	train_loss:2.1899535	val_loss:10.9272022	val_psnr:14.76542	val_ssim:0.26321
+2022-10-14 01:32:25,280 main.py [line:418] INFO:	epoch:16      time:425.39428s	lr:0.00010000	train_loss:1.8845563	val_loss:2.4197437	val_psnr:16.90929	val_ssim:0.31159
+2022-10-14 01:39:16,399 main.py [line:418] INFO:	epoch:17      time:410.97220s	lr:0.00010000	train_loss:2.0468478	val_loss:16.3330926	val_psnr:15.38413	val_ssim:0.28556
+2022-10-14 01:46:29,596 main.py [line:418] INFO:	epoch:18      time:433.03825s	lr:0.00010000	train_loss:1.7650758	val_loss:10.4535305	val_psnr:13.45792	val_ssim:0.27947
+2022-10-14 01:53:44,228 main.py [line:418] INFO:	epoch:19      time:434.49066s	lr:0.00010000	train_loss:1.7359576	val_loss:38.7787668	val_psnr:12.51320	val_ssim:0.27125
+2022-10-14 02:01:12,648 main.py [line:418] INFO:	epoch:20      time:448.26016s	lr:0.00010000	train_loss:1.5301022	val_loss:4.9359457	val_psnr:17.61493	val_ssim:0.30126
+2022-10-14 02:08:39,131 main.py [line:418] INFO:	epoch:21      time:446.34100s	lr:0.00010000	train_loss:1.5152156	val_loss:881.6987335	val_psnr:-16.32208	val_ssim:0.09041
+2022-10-14 02:16:20,176 main.py [line:418] INFO:	epoch:22      time:460.87152s	lr:0.00010000	train_loss:1.2945483	val_loss:3.8303472	val_psnr:17.24218	val_ssim:0.31790
+2022-10-14 02:23:55,267 main.py [line:418] INFO:	epoch:23      time:454.93360s	lr:0.00010000	train_loss:1.3668949	val_loss:12.5878068	val_psnr:11.47430	val_ssim:0.26155
+2022-10-14 02:31:25,900 main.py [line:418] INFO:	epoch:24      time:450.47745s	lr:0.00010000	train_loss:1.4223038	val_loss:31.3203909	val_psnr:13.32563	val_ssim:0.26785
+2022-10-14 02:39:11,072 main.py [line:418] INFO:	epoch:25      time:465.01459s	lr:0.00010000	train_loss:1.1384579	val_loss:1.9046189	val_psnr:17.86819	val_ssim:0.32473
+2022-10-14 02:46:56,069 main.py [line:418] INFO:	epoch:26      time:464.69964s	lr:0.00010000	train_loss:1.1971430	val_loss:1.1577014	val_psnr:18.60858	val_ssim:0.33555
+2022-10-14 02:54:33,587 main.py [line:418] INFO:	epoch:27      time:457.27905s	lr:0.00010000	train_loss:1.1918844	val_loss:16.5744500	val_psnr:14.70525	val_ssim:0.29578
+2022-10-14 03:02:06,263 main.py [line:418] INFO:	epoch:28      time:452.51613s	lr:0.00010000	train_loss:1.3358870	val_loss:16.6885692	val_psnr:16.93837	val_ssim:0.30587
+2022-10-14 03:09:46,361 main.py [line:418] INFO:	epoch:29      time:459.94004s	lr:0.00010000	train_loss:1.1095697	val_loss:36.1316775	val_psnr:15.60931	val_ssim:0.29129
+2022-10-14 03:17:29,221 main.py [line:418] INFO:	epoch:30      time:462.69566s	lr:0.00010000	train_loss:0.9678552	val_loss:24.2236676	val_psnr:16.38019	val_ssim:0.29982
+2022-10-14 03:25:10,346 main.py [line:418] INFO:	epoch:31      time:460.96189s	lr:0.00010000	train_loss:0.9822244	val_loss:47.8296475	val_psnr:15.80574	val_ssim:0.28333
+2022-10-14 03:32:47,580 main.py [line:418] INFO:	epoch:32      time:457.07064s	lr:0.00010000	train_loss:1.0605552	val_loss:37.0594477	val_psnr:16.22748	val_ssim:0.30957
+2022-10-14 03:40:27,146 main.py [line:418] INFO:	epoch:33      time:459.40303s	lr:0.00010000	train_loss:1.0578481	val_loss:22.1901870	val_psnr:16.77028	val_ssim:0.29511
+2022-10-14 03:48:08,049 main.py [line:418] INFO:	epoch:34      time:460.74655s	lr:0.00010000	train_loss:1.0161809	val_loss:3.5946762	val_psnr:18.45476	val_ssim:0.32881
+2022-10-14 03:55:51,031 main.py [line:418] INFO:	epoch:35      time:462.84094s	lr:0.00010000	train_loss:0.9561931	val_loss:11.8074703	val_psnr:17.83164	val_ssim:0.31657
+2022-10-14 04:03:33,225 main.py [line:418] INFO:	epoch:36      time:462.03831s	lr:0.00010000	train_loss:0.8696821	val_loss:16.6760944	val_psnr:17.13479	val_ssim:0.29912
+2022-10-14 04:11:14,848 main.py [line:418] INFO:	epoch:37      time:461.46422s	lr:0.00010000	train_loss:0.8525671	val_loss:14.3409341	val_psnr:17.39305	val_ssim:0.31107
+2022-10-14 04:18:53,685 main.py [line:418] INFO:	epoch:38      time:458.67645s	lr:0.00010000	train_loss:1.0462251	val_loss:34.4909392	val_psnr:15.64593	val_ssim:0.28987
+2022-10-14 04:26:35,592 main.py [line:418] INFO:	epoch:39      time:461.75138s	lr:0.00010000	train_loss:0.9374024	val_loss:32.4814282	val_psnr:14.67638	val_ssim:0.28376
+2022-10-14 04:34:21,765 main.py [line:418] INFO:	epoch:40      time:465.93949s	lr:0.00010000	train_loss:0.7839371	val_loss:1.8924402	val_psnr:18.46144	val_ssim:0.33222
+2022-10-14 04:42:07,899 main.py [line:418] INFO:	epoch:41      time:465.98656s	lr:0.00010000	train_loss:0.7695751	val_loss:1.7726530	val_psnr:18.22342	val_ssim:0.32566
+2022-10-14 04:49:53,170 main.py [line:418] INFO:	epoch:42      time:465.12301s	lr:0.00010000	train_loss:0.8143449	val_loss:3.9899979	val_psnr:18.24805	val_ssim:0.33094
+2022-10-14 04:57:37,824 main.py [line:418] INFO:	epoch:43      time:464.50715s	lr:0.00010000	train_loss:0.7964995	val_loss:2.5972525	val_psnr:17.66780	val_ssim:0.32101
+2022-10-14 05:05:18,817 main.py [line:418] INFO:	epoch:44      time:460.85037s	lr:0.00010000	train_loss:0.6871791	val_loss:49.8594882	val_psnr:9.29380	val_ssim:0.18062
+2022-10-14 05:12:59,894 main.py [line:418] INFO:	epoch:45      time:460.90814s	lr:0.00010000	train_loss:0.7689043	val_loss:57.8054622	val_psnr:5.04790	val_ssim:0.17589
+2022-10-14 05:20:45,283 main.py [line:418] INFO:	epoch:46      time:465.21861s	lr:0.00010000	train_loss:0.7717602	val_loss:4.5390565	val_psnr:18.03696	val_ssim:0.32199
+2022-10-14 05:28:26,888 main.py [line:418] INFO:	epoch:47      time:461.46697s	lr:0.00010000	train_loss:0.7209377	val_loss:42.8676707	val_psnr:9.88513	val_ssim:0.19563
+2022-10-14 05:36:07,325 main.py [line:418] INFO:	epoch:48      time:460.26583s	lr:0.00010000	train_loss:0.3193167	val_loss:102.7838131	val_psnr:5.59921	val_ssim:0.14424
+2022-10-14 05:43:47,768 main.py [line:418] INFO:	epoch:49      time:460.27741s	lr:0.00010000	train_loss:0.3076846	val_loss:125.7171563	val_psnr:8.50716	val_ssim:0.19840
+2022-10-14 05:51:28,959 main.py [line:418] INFO:	epoch:50      time:461.02419s	lr:0.00010000	train_loss:0.3143137	val_loss:199.1427422	val_psnr:3.72626	val_ssim:0.15260
+2022-10-14 05:59:09,313 main.py [line:418] INFO:	epoch:51      time:460.18830s	lr:0.00010000	train_loss:0.2974748	val_loss:32.7504400	val_psnr:12.43217	val_ssim:0.22349
+2022-10-14 06:06:53,128 main.py [line:418] INFO:	epoch:52      time:463.65541s	lr:0.00010000	train_loss:0.3091467	val_loss:6.9394554	val_psnr:16.94533	val_ssim:0.30963
+2022-10-14 06:14:34,506 main.py [line:418] INFO:	epoch:53      time:461.23530s	lr:0.00010000	train_loss:0.2973141	val_loss:22.9872048	val_psnr:14.24729	val_ssim:0.24606
+2022-10-14 06:22:15,486 main.py [line:418] INFO:	epoch:54      time:460.74507s	lr:0.00010000	train_loss:0.2986898	val_loss:20.9350177	val_psnr:13.60129	val_ssim:0.22523
+2022-10-14 06:30:00,944 main.py [line:418] INFO:	epoch:55      time:465.29816s	lr:0.00010000	train_loss:0.2936199	val_loss:44.0142059	val_psnr:13.28499	val_ssim:0.27932
+2022-10-14 06:37:48,221 main.py [line:418] INFO:	epoch:56      time:467.13004s	lr:0.00010000	train_loss:0.2784034	val_loss:4.3815673	val_psnr:17.47645	val_ssim:0.32420
+2022-10-14 06:45:29,150 main.py [line:418] INFO:	epoch:57      time:460.78786s	lr:0.00010000	train_loss:0.2859547	val_loss:93.2648579	val_psnr:6.40878	val_ssim:0.15920
+2022-10-14 06:53:13,088 main.py [line:418] INFO:	epoch:58      time:463.77685s	lr:0.00010000	train_loss:0.2809583	val_loss:12.5690604	val_psnr:16.81050	val_ssim:0.30956
+2022-10-14 07:00:54,235 main.py [line:418] INFO:	epoch:59      time:461.00167s	lr:0.00010000	train_loss:0.2711641	val_loss:65.2496188	val_psnr:7.46559	val_ssim:0.15785
+2022-10-14 07:08:35,873 main.py [line:418] INFO:	epoch:60      time:461.47055s	lr:0.00010000	train_loss:0.2817961	val_loss:58.1144507	val_psnr:9.91302	val_ssim:0.19371
+2022-10-14 07:16:19,175 main.py [line:418] INFO:	epoch:61      time:463.14052s	lr:0.00010000	train_loss:0.2760057	val_loss:65.3075810	val_psnr:11.64196	val_ssim:0.23877
+2022-10-14 07:24:02,662 main.py [line:418] INFO:	epoch:62      time:463.34388s	lr:0.00010000	train_loss:0.3300944	val_loss:47.2688359	val_psnr:10.78970	val_ssim:0.25552
+2022-10-14 07:31:46,953 main.py [line:418] INFO:	epoch:63      time:464.14300s	lr:0.00010000	train_loss:0.2918897	val_loss:62.1077233	val_psnr:11.22832	val_ssim:0.25433
+2022-10-14 07:39:30,461 main.py [line:418] INFO:	epoch:64      time:463.35004s	lr:0.00010000	train_loss:0.2809539	val_loss:21.9267041	val_psnr:14.59892	val_ssim:0.27649
+2022-10-14 07:47:16,779 main.py [line:418] INFO:	epoch:65      time:466.17508s	lr:0.00010000	train_loss:0.2914141	val_loss:41.5769383	val_psnr:15.22889	val_ssim:0.30019
+2022-10-14 07:55:01,847 main.py [line:418] INFO:	epoch:66      time:464.92874s	lr:0.00010000	train_loss:0.2897692	val_loss:15.0422597	val_psnr:16.11716	val_ssim:0.29463
+2022-10-14 08:02:47,395 main.py [line:418] INFO:	epoch:67      time:465.40648s	lr:0.00010000	train_loss:0.2980908	val_loss:0.9618474	val_psnr:18.57141	val_ssim:0.33528
+2022-10-14 08:10:28,348 main.py [line:418] INFO:	epoch:68      time:460.81450s	lr:0.00010000	train_loss:0.2841961	val_loss:22.3967089	val_psnr:15.17156	val_ssim:0.26071
+2022-10-14 08:18:13,086 main.py [line:418] INFO:	epoch:69      time:464.57889s	lr:0.00010000	train_loss:0.1668874	val_loss:2.8139424	val_psnr:18.14744	val_ssim:0.32669
+2022-10-14 08:25:57,274 main.py [line:418] INFO:	epoch:70      time:464.05127s	lr:0.00010000	train_loss:0.1645379	val_loss:12.2476819	val_psnr:16.34858	val_ssim:0.29111
+2022-10-14 08:33:38,509 main.py [line:418] INFO:	epoch:71      time:461.08012s	lr:0.00010000	train_loss:0.1625570	val_loss:37.2085733	val_psnr:12.32379	val_ssim:0.18887
+2022-10-14 08:41:25,116 main.py [line:418] INFO:	epoch:72      time:466.44081s	lr:0.00010000	train_loss:0.1625568	val_loss:1.3840408	val_psnr:18.64690	val_ssim:0.33555
+2022-10-14 08:49:13,225 main.py [line:418] INFO:	epoch:73      time:467.89007s	lr:0.00010000	train_loss:0.1664226	val_loss:1.5801963	val_psnr:18.35347	val_ssim:0.32627
+2022-10-14 08:56:59,292 main.py [line:418] INFO:	epoch:74      time:465.84322s	lr:0.00010000	train_loss:0.1635530	val_loss:3.2174911	val_psnr:18.64068	val_ssim:0.33176
+2022-10-14 09:04:41,533 main.py [line:418] INFO:	epoch:75      time:462.09156s	lr:0.00010000	train_loss:0.1606210	val_loss:33.6712932	val_psnr:13.21186	val_ssim:0.20255
+2022-10-14 09:12:22,026 main.py [line:418] INFO:	epoch:76      time:460.33357s	lr:0.00010000	train_loss:0.1592224	val_loss:26.9031262	val_psnr:14.03131	val_ssim:0.21772
+2022-10-14 09:12:22,186 main.py [line:444] INFO:	The experiment is early stop!
+2022-10-14 13:03:11,834 main.py [line:316] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-14 13:03:11,878 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-14 13:03:11,878 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-14 13:03:12,184 main.py [line:346] INFO:	Initialize model with xavier.
+2022-10-14 13:03:18,128 main.py [line:392] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-14 13:24:20,080 main.py [line:316] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-14 13:24:49,204 main.py [line:316] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-14 13:24:49,254 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-14 13:24:49,255 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-14 13:24:49,539 main.py [line:346] INFO:	Initialize model with xavier.
+2022-10-14 13:24:55,379 main.py [line:392] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-14 13:30:46,761 main.py [line:418] INFO:	epoch:1       time:351.38018s	lr:0.00010000	train_loss:1484.7683900	val_loss:1453.5685327	val_psnr:-9.39638	val_ssim:0.00020
+2022-10-14 13:36:37,783 main.py [line:418] INFO:	epoch:2       time:350.74088s	lr:0.00010000	train_loss:237.6164228	val_loss:165.8469646	val_psnr:-10.46545	val_ssim:0.00111
+2022-10-14 13:42:29,176 main.py [line:418] INFO:	epoch:3       time:351.10176s	lr:0.00010000	train_loss:39.9698623	val_loss:153.9632294	val_psnr:-6.52512	val_ssim:0.01361
+2022-10-14 13:48:20,156 main.py [line:418] INFO:	epoch:4       time:350.69313s	lr:0.00010000	train_loss:15.8439476	val_loss:176.5766601	val_psnr:1.88763	val_ssim:0.06020
+2022-10-14 13:54:11,931 main.py [line:418] INFO:	epoch:5       time:351.43250s	lr:0.00010000	train_loss:8.9631010	val_loss:243.8190751	val_psnr:-0.87371	val_ssim:0.12722
+2022-10-14 14:00:02,818 main.py [line:418] INFO:	epoch:6       time:350.59823s	lr:0.00010000	train_loss:5.9392953	val_loss:468.1811353	val_psnr:-11.33697	val_ssim:0.15800
+2022-10-14 14:05:53,169 main.py [line:418] INFO:	epoch:7       time:350.06981s	lr:0.00010000	train_loss:4.4322503	val_loss:266.6806984	val_psnr:7.78398	val_ssim:0.26858
+2022-10-14 14:11:45,305 main.py [line:418] INFO:	epoch:8       time:351.86249s	lr:0.00010000	train_loss:3.5800804	val_loss:53.7928744	val_psnr:13.27082	val_ssim:0.30505
+2022-10-14 14:17:38,407 main.py [line:418] INFO:	epoch:9       time:352.84157s	lr:0.00010000	train_loss:2.9486821	val_loss:18.5699276	val_psnr:9.77462	val_ssim:0.27814
+2022-10-14 14:23:50,351 main.py [line:418] INFO:	epoch:10      time:371.78487s	lr:0.00010000	train_loss:2.4688018	val_loss:29.0043403	val_psnr:10.06077	val_ssim:0.28700
+2022-10-14 14:30:21,674 main.py [line:418] INFO:	epoch:11      time:391.17935s	lr:0.00010000	train_loss:2.3025704	val_loss:49.1560700	val_psnr:10.49788	val_ssim:0.27557
+2022-10-14 14:37:15,764 main.py [line:418] INFO:	epoch:12      time:413.92494s	lr:0.00010000	train_loss:2.0223599	val_loss:22.3358709	val_psnr:10.82937	val_ssim:0.27972
+2022-10-14 14:44:33,388 main.py [line:418] INFO:	epoch:13      time:437.47903s	lr:0.00010000	train_loss:1.7390257	val_loss:51.1724997	val_psnr:8.86859	val_ssim:0.28069
+2022-10-14 14:51:47,487 main.py [line:418] INFO:	epoch:14      time:433.95372s	lr:0.00010000	train_loss:1.7288787	val_loss:29.3335005	val_psnr:3.58171	val_ssim:0.22997
+2022-10-14 14:59:11,577 main.py [line:418] INFO:	epoch:15      time:443.93237s	lr:0.00010000	train_loss:1.5712047	val_loss:9.6976951	val_psnr:12.36345	val_ssim:0.28408
+2022-10-14 15:06:40,417 main.py [line:418] INFO:	epoch:16      time:448.69153s	lr:0.00010000	train_loss:1.5346471	val_loss:9.9924154	val_psnr:14.90386	val_ssim:0.28301
+2022-10-14 15:14:08,428 main.py [line:418] INFO:	epoch:17      time:447.87005s	lr:0.00010000	train_loss:1.4376839	val_loss:45.1268397	val_psnr:-0.16665	val_ssim:0.22126
+2022-10-14 15:21:42,133 main.py [line:418] INFO:	epoch:18      time:453.55036s	lr:0.00010000	train_loss:1.3093083	val_loss:10.6455762	val_psnr:12.65921	val_ssim:0.28390
+2022-10-14 15:33:44,225 main.py [line:418] INFO:	epoch:19      time:721.95107s	lr:0.00010000	train_loss:1.2285154	val_loss:0.6167284	val_psnr:18.28453	val_ssim:0.33302
+2022-10-14 15:41:13,354 main.py [line:418] INFO:	epoch:20      time:448.91086s	lr:0.00010000	train_loss:1.2278873	val_loss:13.6968194	val_psnr:8.86315	val_ssim:0.24935
+2022-10-14 15:48:42,242 main.py [line:418] INFO:	epoch:21      time:448.73659s	lr:0.00010000	train_loss:1.1064263	val_loss:3.9605819	val_psnr:17.40468	val_ssim:0.32412
+2022-10-14 15:56:09,753 main.py [line:418] INFO:	epoch:22      time:447.37212s	lr:0.00010000	train_loss:1.1118112	val_loss:8.3512379	val_psnr:15.01397	val_ssim:0.30348
+2022-10-14 16:03:31,707 main.py [line:418] INFO:	epoch:23      time:441.80260s	lr:0.00010000	train_loss:1.1375123	val_loss:12.9506572	val_psnr:8.94385	val_ssim:0.24441
+2022-10-14 16:11:03,555 main.py [line:418] INFO:	epoch:24      time:451.69411s	lr:0.00010000	train_loss:1.0304108	val_loss:0.6547049	val_psnr:18.62981	val_ssim:0.33569
+2022-10-14 16:18:30,043 main.py [line:418] INFO:	epoch:25      time:446.27215s	lr:0.00010000	train_loss:0.9841360	val_loss:14.8182664	val_psnr:16.34148	val_ssim:0.30585
+2022-10-14 16:26:09,908 main.py [line:418] INFO:	epoch:26      time:459.70881s	lr:0.00010000	train_loss:0.9378718	val_loss:1.7790060	val_psnr:17.61955	val_ssim:0.31763
+2022-10-14 16:28:51,576 main.py [line:316] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-14 16:28:51,618 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-14 16:28:51,619 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-14 16:28:52,827 main.py [line:339] INFO:	Load checkpoint at epoch 24.
+2022-10-14 16:28:52,828 main.py [line:340] INFO:	Current learning rate is 0.0001.
+2022-10-14 16:28:52,828 main.py [line:341] INFO:	Current best ssim in train phase is 0.33568988690010415.
+2022-10-14 16:28:52,828 main.py [line:342] INFO:	The model is loaded.
+2022-10-14 16:28:57,876 main.py [line:392] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-14 23:09:11,107 main.py [line:317] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-14 23:09:11,142 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-14 23:09:11,143 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-14 23:09:11,414 main.py [line:347] INFO:	Initialize model with xavier.
+2022-10-14 23:09:17,250 main.py [line:393] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-14 23:11:58,273 main.py [line:317] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-14 23:11:58,309 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-14 23:11:58,309 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-14 23:11:58,595 main.py [line:347] INFO:	Initialize model with xavier.
+2022-10-14 23:12:04,373 main.py [line:393] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-14 23:16:13,280 main.py [line:419] INFO:	epoch:1       time:248.90569s	lr:0.00010000	train_loss:90235.3632378	val_loss:1253907.7214063	val_psnr:-12.87136	val_ssim:-0.00002
+2022-10-14 23:20:21,892 main.py [line:419] INFO:	epoch:2       time:248.41764s	lr:0.00010000	train_loss:11397.1236457	val_loss:165718.4185742	val_psnr:-5.07069	val_ssim:0.00408
+2022-10-14 23:24:27,824 main.py [line:419] INFO:	epoch:3       time:245.63476s	lr:0.00010000	train_loss:1390.9093892	val_loss:59266.3379990	val_psnr:0.04300	val_ssim:0.01787
+2022-10-14 23:28:33,155 main.py [line:419] INFO:	epoch:4       time:245.04481s	lr:0.00010000	train_loss:446.7820461	val_loss:31877.3305646	val_psnr:0.65734	val_ssim:0.03110
+2022-10-14 23:32:39,637 main.py [line:419] INFO:	epoch:5       time:246.19558s	lr:0.00010000	train_loss:186.5242884	val_loss:54516.5219981	val_psnr:0.91994	val_ssim:0.03814
+2022-10-14 23:36:46,440 main.py [line:419] INFO:	epoch:6       time:246.51044s	lr:0.00010000	train_loss:92.3465649	val_loss:29983.2054792	val_psnr:2.84698	val_ssim:0.06162
+2022-10-14 23:40:52,372 main.py [line:419] INFO:	epoch:7       time:245.64888s	lr:0.00010000	train_loss:49.0351076	val_loss:26534.1047462	val_psnr:6.74053	val_ssim:0.09160
+2022-10-14 23:44:58,248 main.py [line:419] INFO:	epoch:8       time:245.59532s	lr:0.00010000	train_loss:31.4342022	val_loss:43395.5091653	val_psnr:7.31837	val_ssim:0.11075
+2022-10-14 23:49:04,669 main.py [line:419] INFO:	epoch:9       time:246.14501s	lr:0.00010000	train_loss:20.8473156	val_loss:14863.3576573	val_psnr:8.10622	val_ssim:0.11147
+2022-10-14 23:53:10,555 main.py [line:419] INFO:	epoch:10      time:245.60635s	lr:0.00010000	train_loss:14.2476513	val_loss:22929.4555456	val_psnr:5.32505	val_ssim:0.10375
+2022-10-14 23:57:16,472 main.py [line:419] INFO:	epoch:11      time:245.69100s	lr:0.00010000	train_loss:7.4327871	val_loss:296784.6647585	val_psnr:2.93700	val_ssim:0.11344
+2022-10-15 00:01:22,893 main.py [line:419] INFO:	epoch:12      time:246.13319s	lr:0.00010000	train_loss:6.2546292	val_loss:75361.8119188	val_psnr:5.11646	val_ssim:0.11412
+2022-10-15 00:05:29,268 main.py [line:419] INFO:	epoch:13      time:246.06694s	lr:0.00010000	train_loss:2.6620177	val_loss:100955.9845712	val_psnr:4.90559	val_ssim:0.12807
+2022-10-15 00:09:34,544 main.py [line:419] INFO:	epoch:14      time:244.98257s	lr:0.00010000	train_loss:3.8290044	val_loss:56572.6527896	val_psnr:6.32187	val_ssim:0.13683
+2022-10-15 00:13:40,990 main.py [line:419] INFO:	epoch:15      time:246.16531s	lr:0.00010000	train_loss:4.1073326	val_loss:53387.3216153	val_psnr:9.15382	val_ssim:0.15535
+2022-10-15 00:17:48,089 main.py [line:419] INFO:	epoch:16      time:246.82481s	lr:0.00010000	train_loss:1.3999560	val_loss:54137.5467615	val_psnr:10.00664	val_ssim:0.17218
+2022-10-15 00:21:52,934 main.py [line:419] INFO:	epoch:17      time:244.58018s	lr:0.00010000	train_loss:23.9600749	val_loss:3318.1554160	val_psnr:12.74193	val_ssim:0.16630
+2022-10-15 00:25:58,094 main.py [line:419] INFO:	epoch:18      time:244.98948s	lr:0.00010000	train_loss:0.9794954	val_loss:7653.3425736	val_psnr:12.07082	val_ssim:0.18752
+2022-10-15 00:30:02,837 main.py [line:419] INFO:	epoch:19      time:244.47151s	lr:0.00010000	train_loss:0.6036641	val_loss:7378.2854850	val_psnr:11.51139	val_ssim:0.19327
+2022-10-15 00:34:09,132 main.py [line:419] INFO:	epoch:20      time:246.02539s	lr:0.00010000	train_loss:1.2738829	val_loss:13103.2957103	val_psnr:8.91928	val_ssim:0.20945
+2022-10-15 00:38:22,336 main.py [line:419] INFO:	epoch:21      time:252.92108s	lr:0.00010000	train_loss:0.2489079	val_loss:4365.4687309	val_psnr:14.17739	val_ssim:0.25118
+2022-10-15 00:42:34,200 main.py [line:419] INFO:	epoch:22      time:251.58184s	lr:0.00010000	train_loss:1.2593779	val_loss:793.1206888	val_psnr:13.08174	val_ssim:0.26817
+2022-10-15 00:46:57,078 main.py [line:419] INFO:	epoch:23      time:262.60794s	lr:0.00010000	train_loss:0.8524167	val_loss:283.3158234	val_psnr:16.88151	val_ssim:0.30326
+2022-10-15 00:51:12,079 main.py [line:419] INFO:	epoch:24      time:254.75067s	lr:0.00010000	train_loss:0.5375267	val_loss:635.3543691	val_psnr:11.65172	val_ssim:0.25219
+2022-10-15 00:55:48,411 main.py [line:419] INFO:	epoch:25      time:276.17587s	lr:0.00010000	train_loss:0.2597162	val_loss:2209.6276579	val_psnr:13.46350	val_ssim:0.29363
+2022-10-15 01:00:44,733 main.py [line:419] INFO:	epoch:26      time:296.16529s	lr:0.00010000	train_loss:1.5186224	val_loss:44.1515512	val_psnr:17.75072	val_ssim:0.32344
+2022-10-15 01:05:53,445 main.py [line:419] INFO:	epoch:27      time:308.47624s	lr:0.00010000	train_loss:0.4316283	val_loss:279.2836382	val_psnr:16.96631	val_ssim:0.31568
+2022-10-15 01:10:28,668 main.py [line:419] INFO:	epoch:28      time:275.06093s	lr:0.00010000	train_loss:2.2389355	val_loss:0.7660492	val_psnr:18.53643	val_ssim:0.33213
+2022-10-15 01:15:48,972 main.py [line:419] INFO:	epoch:29      time:320.06590s	lr:0.00010000	train_loss:0.0833781	val_loss:11.2068453	val_psnr:18.19835	val_ssim:0.31669
+2022-10-15 01:20:31,438 main.py [line:419] INFO:	epoch:30      time:282.32362s	lr:0.00010000	train_loss:1.8735690	val_loss:260.2593831	val_psnr:17.05703	val_ssim:0.28561
+2022-10-15 01:25:53,227 main.py [line:419] INFO:	epoch:31      time:321.63257s	lr:0.00010000	train_loss:0.0832681	val_loss:527.6868910	val_psnr:15.91060	val_ssim:0.27046
+2022-10-15 01:31:09,613 main.py [line:419] INFO:	epoch:32      time:316.22643s	lr:0.00010000	train_loss:0.1118685	val_loss:420.1236025	val_psnr:16.78389	val_ssim:0.29496
+2022-10-15 01:36:14,696 main.py [line:419] INFO:	epoch:33      time:304.91142s	lr:0.00010000	train_loss:1.1591987	val_loss:1.0409513	val_psnr:18.58741	val_ssim:0.33496
+2022-10-15 01:41:47,544 main.py [line:419] INFO:	epoch:34      time:332.61403s	lr:0.00010000	train_loss:0.0889769	val_loss:0.2512257	val_psnr:18.63806	val_ssim:0.33627
+2022-10-15 01:47:02,136 main.py [line:419] INFO:	epoch:35      time:314.35795s	lr:0.00010000	train_loss:0.1084453	val_loss:180.7155288	val_psnr:16.34745	val_ssim:0.28032
+2022-10-15 01:51:42,795 main.py [line:419] INFO:	epoch:36      time:280.49466s	lr:0.00010000	train_loss:1.3827094	val_loss:118.2107958	val_psnr:16.68527	val_ssim:0.28827
+2022-10-15 01:56:51,894 main.py [line:419] INFO:	epoch:37      time:308.93707s	lr:0.00010000	train_loss:0.6328307	val_loss:6.1195405	val_psnr:18.45202	val_ssim:0.32178
+2022-10-15 02:02:22,796 main.py [line:419] INFO:	epoch:38      time:330.74381s	lr:0.00010000	train_loss:0.0675176	val_loss:2.1472281	val_psnr:18.65149	val_ssim:0.33599
+2022-10-15 02:07:36,021 main.py [line:419] INFO:	epoch:39      time:313.08591s	lr:0.00010000	train_loss:0.8616699	val_loss:9.1149259	val_psnr:18.34800	val_ssim:0.32005
+2022-10-15 02:12:49,701 main.py [line:419] INFO:	epoch:40      time:313.53787s	lr:0.00010000	train_loss:1.2597846	val_loss:32.4345300	val_psnr:17.61611	val_ssim:0.30824
+2022-10-15 02:18:34,500 main.py [line:419] INFO:	epoch:41      time:344.62378s	lr:0.00010000	train_loss:0.0355448	val_loss:0.8350976	val_psnr:18.57773	val_ssim:0.33522
+2022-10-15 02:24:07,026 main.py [line:419] INFO:	epoch:42      time:332.38551s	lr:0.00010000	train_loss:0.0627538	val_loss:68.1952196	val_psnr:16.99202	val_ssim:0.30407
+2022-10-15 02:29:06,812 main.py [line:419] INFO:	epoch:43      time:299.62890s	lr:0.00010000	train_loss:1.2055761	val_loss:0.2929721	val_psnr:18.66120	val_ssim:0.33547
+2022-10-15 02:34:55,699 main.py [line:419] INFO:	epoch:44      time:348.74759s	lr:0.00010000	train_loss:0.0306508	val_loss:0.0678655	val_psnr:18.63957	val_ssim:0.33588
+2022-10-15 02:40:38,140 main.py [line:419] INFO:	epoch:45      time:342.30110s	lr:0.00010000	train_loss:0.0414189	val_loss:0.1338395	val_psnr:18.61931	val_ssim:0.33568
+2022-10-15 02:46:05,619 main.py [line:419] INFO:	epoch:46      time:327.34167s	lr:0.00010000	train_loss:0.0811453	val_loss:27.7908223	val_psnr:18.65032	val_ssim:0.33635
+2022-10-15 02:51:32,020 main.py [line:419] INFO:	epoch:47      time:326.17341s	lr:0.00010000	train_loss:0.0932595	val_loss:12.2321826	val_psnr:18.11762	val_ssim:0.32806
+2022-10-15 02:56:52,332 main.py [line:419] INFO:	epoch:48      time:320.15448s	lr:0.00010000	train_loss:0.5996250	val_loss:31.3079244	val_psnr:16.92982	val_ssim:0.30274
+2022-10-15 03:02:37,245 main.py [line:419] INFO:	epoch:49      time:344.75762s	lr:0.00010000	train_loss:0.0183563	val_loss:642.3047662	val_psnr:13.70534	val_ssim:0.24078
+2022-10-15 03:07:41,790 main.py [line:419] INFO:	epoch:50      time:304.39503s	lr:0.00010000	train_loss:0.5393887	val_loss:130.8608102	val_psnr:16.84413	val_ssim:0.30233
+2022-10-15 03:12:50,238 main.py [line:419] INFO:	epoch:51      time:308.29250s	lr:0.00010000	train_loss:0.3169434	val_loss:21.5740775	val_psnr:18.55839	val_ssim:0.32822
+2022-10-15 03:18:35,754 main.py [line:419] INFO:	epoch:52      time:345.37886s	lr:0.00010000	train_loss:0.0199726	val_loss:90.3950546	val_psnr:18.18028	val_ssim:0.31994
+2022-10-15 03:23:47,976 main.py [line:419] INFO:	epoch:53      time:312.06725s	lr:0.00010000	train_loss:0.3851316	val_loss:9.7126558	val_psnr:17.98561	val_ssim:0.32283
+2022-10-15 03:29:34,186 main.py [line:419] INFO:	epoch:54      time:346.03474s	lr:0.00010000	train_loss:0.0160191	val_loss:26.2249218	val_psnr:18.19752	val_ssim:0.32252
+2022-10-15 03:34:56,948 main.py [line:419] INFO:	epoch:55      time:322.60248s	lr:0.00010000	train_loss:0.1614226	val_loss:3722.7602476	val_psnr:16.19910	val_ssim:0.30898
+2022-10-15 03:40:03,587 main.py [line:419] INFO:	epoch:56      time:306.49991s	lr:0.00010000	train_loss:0.2868735	val_loss:2175.0682007	val_psnr:12.52604	val_ssim:0.29329
+2022-10-15 03:45:21,692 main.py [line:419] INFO:	epoch:57      time:317.94777s	lr:0.00010000	train_loss:0.7015676	val_loss:4.1931736	val_psnr:18.46379	val_ssim:0.32993
+2022-10-15 03:50:36,164 main.py [line:419] INFO:	epoch:58      time:314.33431s	lr:0.00010000	train_loss:0.7981038	val_loss:48.2242738	val_psnr:18.01361	val_ssim:0.31394
+2022-10-15 03:56:14,632 main.py [line:419] INFO:	epoch:59      time:338.32728s	lr:0.00010000	train_loss:0.1002771	val_loss:143.5518221	val_psnr:17.91477	val_ssim:0.31900
+2022-10-15 04:01:53,047 main.py [line:419] INFO:	epoch:60      time:338.24837s	lr:0.00010000	train_loss:0.0519501	val_loss:30.8657223	val_psnr:18.07324	val_ssim:0.32119
+2022-10-15 04:07:17,115 main.py [line:419] INFO:	epoch:61      time:323.92993s	lr:0.00010000	train_loss:0.5961385	val_loss:19.4009293	val_psnr:18.18816	val_ssim:0.32083
+2022-10-15 04:13:05,667 main.py [line:419] INFO:	epoch:62      time:348.41230s	lr:0.00010000	train_loss:0.0081227	val_loss:7.7863146	val_psnr:18.32082	val_ssim:0.32750
+2022-10-15 04:18:19,287 main.py [line:419] INFO:	epoch:63      time:313.47962s	lr:0.00010000	train_loss:2.2566032	val_loss:7.3939522	val_psnr:17.79600	val_ssim:0.31536
+2022-10-15 04:24:06,273 main.py [line:419] INFO:	epoch:64      time:346.84968s	lr:0.00010000	train_loss:0.0291919	val_loss:1.9335732	val_psnr:18.55669	val_ssim:0.33188
+2022-10-15 04:29:53,670 main.py [line:419] INFO:	epoch:65      time:347.25617s	lr:0.00010000	train_loss:0.0154611	val_loss:6.2606766	val_psnr:18.51872	val_ssim:0.33167
+2022-10-15 04:35:40,014 main.py [line:419] INFO:	epoch:66      time:346.20442s	lr:0.00010000	train_loss:0.0131017	val_loss:5.9116881	val_psnr:18.44423	val_ssim:0.33137
+2022-10-15 04:41:23,832 main.py [line:419] INFO:	epoch:67      time:343.67956s	lr:0.00010000	train_loss:0.0230879	val_loss:17.5990309	val_psnr:18.00142	val_ssim:0.32541
+2022-10-15 04:47:09,619 main.py [line:419] INFO:	epoch:68      time:345.63552s	lr:0.00010000	train_loss:0.0044973	val_loss:68.7343238	val_psnr:17.34087	val_ssim:0.31043
+2022-10-15 04:52:56,325 main.py [line:419] INFO:	epoch:69      time:346.54809s	lr:0.00010000	train_loss:0.0040884	val_loss:36.5972196	val_psnr:16.93200	val_ssim:0.30623
+2022-10-15 04:58:42,683 main.py [line:419] INFO:	epoch:70      time:346.21569s	lr:0.00010000	train_loss:0.0050764	val_loss:11.5483568	val_psnr:18.03943	val_ssim:0.32529
+2022-10-15 05:04:30,809 main.py [line:419] INFO:	epoch:71      time:347.98546s	lr:0.00010000	train_loss:0.0071432	val_loss:15.3573016	val_psnr:18.23637	val_ssim:0.32860
+2022-10-15 05:10:18,011 main.py [line:419] INFO:	epoch:72      time:347.05464s	lr:0.00010000	train_loss:0.0057010	val_loss:22.6747829	val_psnr:17.63053	val_ssim:0.31886
+2022-10-15 05:16:03,319 main.py [line:419] INFO:	epoch:73      time:345.16939s	lr:0.00010000	train_loss:0.0291873	val_loss:2.4198335	val_psnr:18.49123	val_ssim:0.33323
+2022-10-15 05:21:53,840 main.py [line:419] INFO:	epoch:74      time:350.38209s	lr:0.00010000	train_loss:0.0031602	val_loss:0.4676074	val_psnr:18.60407	val_ssim:0.33507
+2022-10-15 05:27:36,344 main.py [line:419] INFO:	epoch:75      time:342.36587s	lr:0.00010000	train_loss:0.0370377	val_loss:10.4900526	val_psnr:17.70795	val_ssim:0.33055
+2022-10-15 05:33:22,618 main.py [line:419] INFO:	epoch:76      time:346.13363s	lr:0.00010000	train_loss:0.0162723	val_loss:0.2073420	val_psnr:18.66689	val_ssim:0.33691
+2022-10-15 05:39:13,556 main.py [line:419] INFO:	epoch:77      time:350.70693s	lr:0.00010000	train_loss:0.0023868	val_loss:1.2159047	val_psnr:18.56666	val_ssim:0.33449
+2022-10-15 05:44:55,399 main.py [line:419] INFO:	epoch:78      time:341.70324s	lr:0.00010000	train_loss:0.0491416	val_loss:0.4608158	val_psnr:18.65521	val_ssim:0.33651
+2022-10-15 05:50:42,384 main.py [line:419] INFO:	epoch:79      time:346.84592s	lr:0.00010000	train_loss:0.0031925	val_loss:73.4181386	val_psnr:17.62681	val_ssim:0.31028
+2022-10-15 05:56:27,219 main.py [line:419] INFO:	epoch:80      time:344.69361s	lr:0.00010000	train_loss:0.0097274	val_loss:351.5010507	val_psnr:16.01300	val_ssim:0.28152
+2022-10-15 06:02:08,824 main.py [line:419] INFO:	epoch:81      time:341.45007s	lr:0.00010000	train_loss:0.0728584	val_loss:63.6280902	val_psnr:17.85762	val_ssim:0.31710
+2022-10-15 06:07:54,403 main.py [line:419] INFO:	epoch:82      time:345.43864s	lr:0.00010000	train_loss:0.0029325	val_loss:272.8720413	val_psnr:16.51001	val_ssim:0.27689
+2022-10-15 06:13:27,031 main.py [line:419] INFO:	epoch:83      time:332.47316s	lr:0.00010000	train_loss:0.0896988	val_loss:434.8012350	val_psnr:16.10242	val_ssim:0.30797
+2022-10-15 06:19:12,988 main.py [line:419] INFO:	epoch:84      time:345.80216s	lr:0.00010000	train_loss:0.0054453	val_loss:169.3823372	val_psnr:16.96354	val_ssim:0.29738
+2022-10-15 06:24:58,926 main.py [line:419] INFO:	epoch:85      time:345.78625s	lr:0.00010000	train_loss:0.0044973	val_loss:338.6415444	val_psnr:16.42496	val_ssim:0.29399
+2022-10-15 06:30:32,789 main.py [line:419] INFO:	epoch:86      time:333.70933s	lr:0.00010000	train_loss:0.1041960	val_loss:71.1519736	val_psnr:17.29181	val_ssim:0.31111
+2022-10-15 06:36:18,640 main.py [line:419] INFO:	epoch:87      time:345.69739s	lr:0.00010000	train_loss:0.0022177	val_loss:13.9815023	val_psnr:18.47986	val_ssim:0.33033
+2022-10-15 06:41:59,352 main.py [line:419] INFO:	epoch:88      time:340.57218s	lr:0.00010000	train_loss:0.0545546	val_loss:49.9032501	val_psnr:17.17073	val_ssim:0.30277
+2022-10-15 06:47:42,580 main.py [line:419] INFO:	epoch:89      time:343.07234s	lr:0.00010000	train_loss:0.0347998	val_loss:11.2862547	val_psnr:18.46180	val_ssim:0.32965
+2022-10-15 06:53:28,145 main.py [line:419] INFO:	epoch:90      time:345.42509s	lr:0.00010000	train_loss:0.0025875	val_loss:26.7771545	val_psnr:17.96760	val_ssim:0.31456
+2022-10-15 06:59:17,107 main.py [line:419] INFO:	epoch:91      time:348.80957s	lr:0.00010000	train_loss:0.0192985	val_loss:0.0152175	val_psnr:18.61327	val_ssim:0.33633
+2022-10-15 07:05:06,354 main.py [line:419] INFO:	epoch:92      time:349.11001s	lr:0.00010000	train_loss:0.0036578	val_loss:0.1142188	val_psnr:18.67872	val_ssim:0.33717
+2022-10-15 07:10:51,126 main.py [line:419] INFO:	epoch:93      time:344.55604s	lr:0.00010000	train_loss:0.0311749	val_loss:0.3227579	val_psnr:18.77223	val_ssim:0.34061
+2022-10-15 07:16:39,835 main.py [line:419] INFO:	epoch:94      time:348.49139s	lr:0.00010000	train_loss:0.0075194	val_loss:2.2041541	val_psnr:18.60734	val_ssim:0.33566
+2022-10-15 07:22:25,477 main.py [line:419] INFO:	epoch:95      time:345.50649s	lr:0.00010000	train_loss:0.0294132	val_loss:0.7555993	val_psnr:18.60365	val_ssim:0.33601
+2022-10-15 07:28:14,796 main.py [line:419] INFO:	epoch:96      time:349.18291s	lr:0.00010000	train_loss:0.0030535	val_loss:0.3193409	val_psnr:18.72926	val_ssim:0.34006
+2022-10-15 07:33:58,259 main.py [line:419] INFO:	epoch:97      time:343.32531s	lr:0.00010000	train_loss:0.0289050	val_loss:1.2984103	val_psnr:18.64771	val_ssim:0.33669
+2022-10-15 07:39:49,052 main.py [line:419] INFO:	epoch:98      time:350.65504s	lr:0.00010000	train_loss:0.0020750	val_loss:1.9427321	val_psnr:18.71143	val_ssim:0.33932
+2022-10-15 07:45:30,979 main.py [line:419] INFO:	epoch:99      time:341.78836s	lr:0.00010000	train_loss:0.0518675	val_loss:0.1860651	val_psnr:18.69130	val_ssim:0.33717
+2022-10-15 07:51:19,932 main.py [line:419] INFO:	epoch:100     time:348.81572s	lr:0.00010000	train_loss:0.0033678	val_loss:0.2800391	val_psnr:18.68100	val_ssim:0.33778
+2022-10-15 07:57:02,294 main.py [line:419] INFO:	epoch:101     time:342.22578s	lr:0.00010000	train_loss:0.1315166	val_loss:1.7239348	val_psnr:18.53246	val_ssim:0.33571
+2022-10-15 08:02:50,833 main.py [line:419] INFO:	epoch:102     time:348.32830s	lr:0.00010000	train_loss:0.0047588	val_loss:1.4226758	val_psnr:18.63594	val_ssim:0.33675
+2022-10-15 08:08:36,042 main.py [line:419] INFO:	epoch:103     time:345.07090s	lr:0.00010000	train_loss:0.0215275	val_loss:6.0650451	val_psnr:18.26607	val_ssim:0.33295
+2022-10-15 08:14:24,360 main.py [line:419] INFO:	epoch:104     time:348.17750s	lr:0.00010000	train_loss:0.0099351	val_loss:1.6690763	val_psnr:18.66841	val_ssim:0.33820
+2022-10-15 08:20:03,052 main.py [line:419] INFO:	epoch:105     time:338.55382s	lr:0.00010000	train_loss:0.0530714	val_loss:66.8939533	val_psnr:17.74154	val_ssim:0.31493
+2022-10-15 08:25:48,068 main.py [line:419] INFO:	epoch:106     time:344.84865s	lr:0.00010000	train_loss:0.0021670	val_loss:140.6227691	val_psnr:16.21459	val_ssim:0.30181
+2022-10-15 08:31:34,610 main.py [line:419] INFO:	epoch:107     time:346.38812s	lr:0.00010000	train_loss:0.0030398	val_loss:126.3590928	val_psnr:16.36492	val_ssim:0.30663
+2022-10-15 08:37:19,654 main.py [line:419] INFO:	epoch:108     time:344.89353s	lr:0.00010000	train_loss:0.0084042	val_loss:643.7574733	val_psnr:13.37189	val_ssim:0.27359
+2022-10-15 08:42:58,052 main.py [line:419] INFO:	epoch:109     time:338.24107s	lr:0.00010000	train_loss:0.0573564	val_loss:12.6753988	val_psnr:18.47637	val_ssim:0.33350
+2022-10-15 08:48:40,604 main.py [line:419] INFO:	epoch:110     time:342.41404s	lr:0.00010000	train_loss:0.0382031	val_loss:200.7094830	val_psnr:16.15178	val_ssim:0.32077
+2022-10-15 08:54:29,598 main.py [line:419] INFO:	epoch:111     time:348.85734s	lr:0.00010000	train_loss:0.0065953	val_loss:0.1342855	val_psnr:18.61950	val_ssim:0.33550
+2022-10-15 09:00:15,746 main.py [line:419] INFO:	epoch:112     time:346.00984s	lr:0.00010000	train_loss:0.0025181	val_loss:17.7113387	val_psnr:18.33457	val_ssim:0.32500
+2022-10-15 09:05:57,940 main.py [line:419] INFO:	epoch:113     time:342.05373s	lr:0.00010000	train_loss:0.0215499	val_loss:1053.0327660	val_psnr:16.10175	val_ssim:0.30053
+2022-10-15 09:11:33,455 main.py [line:419] INFO:	epoch:114     time:335.36017s	lr:0.00010000	train_loss:0.0852400	val_loss:24.0653275	val_psnr:18.17800	val_ssim:0.32213
+2022-10-15 09:17:20,489 main.py [line:419] INFO:	epoch:115     time:346.89689s	lr:0.00010000	train_loss:0.0018240	val_loss:45.3385923	val_psnr:17.61343	val_ssim:0.31688
+2022-10-15 09:23:08,455 main.py [line:419] INFO:	epoch:116     time:347.82958s	lr:0.00010000	train_loss:0.0017035	val_loss:5.6261377	val_psnr:18.46286	val_ssim:0.32980
+2022-10-15 09:28:56,690 main.py [line:419] INFO:	epoch:117     time:348.09875s	lr:0.00010000	train_loss:0.0016664	val_loss:10.1005378	val_psnr:18.57761	val_ssim:0.33267
+2022-10-15 09:34:42,368 main.py [line:419] INFO:	epoch:118     time:345.46241s	lr:0.00010000	train_loss:0.0015615	val_loss:177.6426421	val_psnr:16.31084	val_ssim:0.28189
+2022-10-15 09:40:29,214 main.py [line:419] INFO:	epoch:119     time:346.69192s	lr:0.00010000	train_loss:0.0030921	val_loss:78.2403866	val_psnr:17.37617	val_ssim:0.31011
+2022-10-15 09:46:17,278 main.py [line:419] INFO:	epoch:120     time:347.91291s	lr:0.00010000	train_loss:0.0057060	val_loss:16.0520657	val_psnr:18.31630	val_ssim:0.32861
+2022-10-15 09:52:05,578 main.py [line:419] INFO:	epoch:121     time:348.16094s	lr:0.00010000	train_loss:0.0012681	val_loss:4.9555909	val_psnr:18.49647	val_ssim:0.33286
+2022-10-15 09:57:51,599 main.py [line:419] INFO:	epoch:122     time:345.88538s	lr:0.00010000	train_loss:0.0026195	val_loss:25.0540903	val_psnr:18.13770	val_ssim:0.32462
+2022-10-15 10:03:37,566 main.py [line:419] INFO:	epoch:123     time:345.83017s	lr:0.00010000	train_loss:0.0021967	val_loss:53.4135113	val_psnr:17.47204	val_ssim:0.31838
+2022-10-15 10:09:23,117 main.py [line:419] INFO:	epoch:124     time:345.41643s	lr:0.00010000	train_loss:0.0048985	val_loss:2.2999109	val_psnr:18.55446	val_ssim:0.33534
+2022-10-15 10:15:11,536 main.py [line:419] INFO:	epoch:125     time:348.28507s	lr:0.00010000	train_loss:0.0069598	val_loss:3.4340171	val_psnr:18.42383	val_ssim:0.33287
+2022-10-15 10:21:02,961 main.py [line:419] INFO:	epoch:126     time:351.28656s	lr:0.00010000	train_loss:0.0008024	val_loss:0.6735939	val_psnr:18.66904	val_ssim:0.33624
+2022-10-15 10:26:54,677 main.py [line:419] INFO:	epoch:127     time:351.57926s	lr:0.00010000	train_loss:0.0007081	val_loss:0.3924919	val_psnr:18.59165	val_ssim:0.33501
+2022-10-15 10:32:43,709 main.py [line:419] INFO:	epoch:128     time:348.89362s	lr:0.00010000	train_loss:0.0043898	val_loss:21.7308693	val_psnr:18.29119	val_ssim:0.32523
+2022-10-15 10:38:33,044 main.py [line:419] INFO:	epoch:129     time:349.19614s	lr:0.00010000	train_loss:0.0014859	val_loss:18.2044079	val_psnr:18.35720	val_ssim:0.32916
+2022-10-15 10:44:23,456 main.py [line:419] INFO:	epoch:130     time:350.27803s	lr:0.00010000	train_loss:0.0033936	val_loss:63.7277398	val_psnr:17.95291	val_ssim:0.31755
+2022-10-15 10:50:13,904 main.py [line:419] INFO:	epoch:131     time:350.31165s	lr:0.00010000	train_loss:0.0007996	val_loss:47.8102545	val_psnr:18.22878	val_ssim:0.32926
+2022-10-15 10:56:04,319 main.py [line:419] INFO:	epoch:132     time:350.27588s	lr:0.00010000	train_loss:0.0007309	val_loss:80.2564427	val_psnr:17.94024	val_ssim:0.32193
+2022-10-15 11:01:54,906 main.py [line:419] INFO:	epoch:133     time:350.44766s	lr:0.00010000	train_loss:0.0046958	val_loss:19.6857132	val_psnr:18.37946	val_ssim:0.32973
+2022-10-15 11:07:44,230 main.py [line:419] INFO:	epoch:134     time:349.18805s	lr:0.00010000	train_loss:0.0081930	val_loss:6.3217573	val_psnr:18.26807	val_ssim:0.32260
+2022-10-15 11:13:34,603 main.py [line:419] INFO:	epoch:135     time:350.23516s	lr:0.00010000	train_loss:0.0010400	val_loss:4.7318358	val_psnr:18.42066	val_ssim:0.33213
+2022-10-15 11:19:26,392 main.py [line:419] INFO:	epoch:136     time:351.64896s	lr:0.00010000	train_loss:0.0005847	val_loss:0.4540732	val_psnr:18.65149	val_ssim:0.33736
+2022-10-15 11:25:17,948 main.py [line:419] INFO:	epoch:137     time:351.41985s	lr:0.00010000	train_loss:0.0005834	val_loss:13.1680893	val_psnr:18.58017	val_ssim:0.33314
+2022-10-15 11:31:09,783 main.py [line:419] INFO:	epoch:138     time:351.69511s	lr:0.00010000	train_loss:0.0006052	val_loss:0.5566957	val_psnr:18.64193	val_ssim:0.33636
+2022-10-15 11:36:58,750 main.py [line:419] INFO:	epoch:139     time:348.82798s	lr:0.00010000	train_loss:0.0005767	val_loss:13.7731865	val_psnr:18.35840	val_ssim:0.32964
+2022-10-15 11:42:48,568 main.py [line:419] INFO:	epoch:140     time:349.68311s	lr:0.00010000	train_loss:0.0005802	val_loss:6.2997093	val_psnr:18.52327	val_ssim:0.33574
+2022-10-15 11:48:38,654 main.py [line:419] INFO:	epoch:141     time:349.94886s	lr:0.00010000	train_loss:0.0005573	val_loss:3.2608618	val_psnr:18.66887	val_ssim:0.33733
+2022-10-15 11:54:28,711 main.py [line:419] INFO:	epoch:142     time:349.92117s	lr:0.00010000	train_loss:0.0005014	val_loss:4.2283370	val_psnr:18.66187	val_ssim:0.33772
+2022-10-15 12:00:19,416 main.py [line:419] INFO:	epoch:143     time:350.56809s	lr:0.00010000	train_loss:0.0004753	val_loss:120.7386571	val_psnr:17.60944	val_ssim:0.31331
+2022-10-15 12:00:19,571 main.py [line:445] INFO:	The experiment is early stop!
+2022-10-20 00:09:22,785 main.py [line:317] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-20 00:09:22,818 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-20 00:09:22,818 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-20 00:09:23,127 main.py [line:347] INFO:	Initialize model with xavier.
+2022-10-20 00:09:31,216 main.py [line:393] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-20 00:10:45,251 main.py [line:317] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-20 00:10:45,291 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-20 00:10:45,291 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-20 00:10:45,570 main.py [line:347] INFO:	Initialize model with xavier.
+2022-10-20 00:10:53,878 main.py [line:393] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-20 00:19:28,864 main.py [line:317] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-20 00:19:28,898 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-20 00:19:28,898 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-20 00:19:29,191 main.py [line:347] INFO:	Initialize model with xavier.
+2022-10-20 00:19:37,605 main.py [line:393] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-20 00:21:58,214 main.py [line:317] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-20 00:21:58,258 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-20 00:21:58,258 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-20 00:21:58,563 main.py [line:347] INFO:	Initialize model with xavier.
+2022-10-20 00:26:24,361 main.py [line:317] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-20 00:26:24,395 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-20 00:26:24,396 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-20 00:26:24,687 main.py [line:347] INFO:	Initialize model with xavier.
+2022-10-20 00:26:32,955 main.py [line:394] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-20 00:29:48,562 main.py [line:317] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-20 00:29:48,593 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-20 00:29:48,593 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-20 00:29:48,875 main.py [line:347] INFO:	Initialize model with xavier.
+2022-10-20 00:29:57,138 main.py [line:394] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-20 00:36:58,713 main.py [line:318] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-20 00:36:58,753 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-20 00:36:58,753 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-20 00:36:59,037 main.py [line:348] INFO:	Initialize model with xavier.
+2022-10-20 00:37:07,522 main.py [line:395] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-20 00:38:03,101 main.py [line:318] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-20 00:38:03,154 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-20 00:38:03,155 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-20 00:38:03,490 main.py [line:348] INFO:	Initialize model with xavier.
+2022-10-20 00:38:11,789 main.py [line:395] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-20 00:42:47,015 main.py [line:318] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-20 00:42:47,051 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-20 00:42:47,051 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-20 00:42:47,315 main.py [line:348] INFO:	Initialize model with xavier.
+2022-10-20 00:42:55,599 main.py [line:396] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-20 00:49:30,024 main.py [line:318] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-20 00:49:30,059 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-20 00:49:30,059 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-20 00:49:30,291 main.py [line:348] INFO:	Initialize model with xavier.
+2022-10-20 00:50:02,753 main.py [line:396] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-20 01:20:50,440 main.py [line:422] INFO:	epoch:1       time:1847.68504s	lr:0.00010000	train_loss:1946.5169837	val_loss:3251.7110074	val_psnr:-10.25521	val_ssim:0.00012
+2022-10-20 01:51:38,687 main.py [line:422] INFO:	epoch:2       time:1847.95430s	lr:0.00010000	train_loss:90.0854430	val_loss:268.2765538	val_psnr:2.00143	val_ssim:0.03782
+2022-10-20 02:22:24,456 main.py [line:422] INFO:	epoch:3       time:1845.48433s	lr:0.00010000	train_loss:7.9715506	val_loss:591.2690205	val_psnr:3.35294	val_ssim:0.27539
+2022-10-20 02:53:06,565 main.py [line:422] INFO:	epoch:4       time:1841.73342s	lr:0.00010000	train_loss:3.1450078	val_loss:1481.6185612	val_psnr:-7.66764	val_ssim:0.24453
+2022-10-20 03:23:53,784 main.py [line:422] INFO:	epoch:5       time:1847.04295s	lr:0.00010000	train_loss:2.1869048	val_loss:152.8790667	val_psnr:3.62341	val_ssim:0.27409
+2022-10-20 03:54:38,241 main.py [line:422] INFO:	epoch:6       time:1844.28574s	lr:0.00010000	train_loss:1.7550529	val_loss:0.3316054	val_psnr:16.60233	val_ssim:0.35830
+2022-10-20 04:25:26,450 main.py [line:422] INFO:	epoch:7       time:1847.92645s	lr:0.00010000	train_loss:1.4212786	val_loss:15.3679503	val_psnr:13.19057	val_ssim:0.33188
+2022-10-20 04:56:13,199 main.py [line:422] INFO:	epoch:8       time:1846.57102s	lr:0.00010000	train_loss:1.4501313	val_loss:29.9100182	val_psnr:12.45802	val_ssim:0.29732
+2022-10-20 05:26:56,688 main.py [line:422] INFO:	epoch:9       time:1843.31935s	lr:0.00010000	train_loss:1.1763704	val_loss:12.0427568	val_psnr:5.94248	val_ssim:0.26658
+2022-10-20 05:57:39,186 main.py [line:422] INFO:	epoch:10      time:1842.31439s	lr:0.00010000	train_loss:1.1768546	val_loss:10.1707340	val_psnr:16.45752	val_ssim:0.35843
+2022-10-20 06:28:24,119 main.py [line:422] INFO:	epoch:11      time:1844.58006s	lr:0.00010000	train_loss:1.1410688	val_loss:24.3704551	val_psnr:14.70763	val_ssim:0.33453
+2022-10-20 06:59:11,043 main.py [line:422] INFO:	epoch:12      time:1846.74477s	lr:0.00010000	train_loss:1.0609142	val_loss:38.4433184	val_psnr:9.09887	val_ssim:0.27559
+2022-10-20 07:29:54,080 main.py [line:422] INFO:	epoch:13      time:1842.86226s	lr:0.00010000	train_loss:0.8945883	val_loss:20.5519826	val_psnr:14.43480	val_ssim:0.32787
+2022-10-20 08:00:39,630 main.py [line:422] INFO:	epoch:14      time:1845.38004s	lr:0.00010000	train_loss:0.8074602	val_loss:64.6966234	val_psnr:9.86782	val_ssim:0.29535
+2022-10-20 08:31:22,442 main.py [line:422] INFO:	epoch:15      time:1842.62957s	lr:0.00010000	train_loss:0.7396059	val_loss:4.3653381	val_psnr:16.00279	val_ssim:0.34931
+2022-10-20 09:02:06,504 main.py [line:422] INFO:	epoch:16      time:1843.88992s	lr:0.00010000	train_loss:0.6654594	val_loss:24.3822773	val_psnr:14.90177	val_ssim:0.32140
+2022-10-20 09:32:51,381 main.py [line:422] INFO:	epoch:17      time:1844.70984s	lr:0.00010000	train_loss:0.6304766	val_loss:2.2723443	val_psnr:16.46408	val_ssim:0.35053
+2022-10-20 10:03:38,410 main.py [line:422] INFO:	epoch:18      time:1846.85667s	lr:0.00010000	train_loss:0.6283549	val_loss:5.9582741	val_psnr:14.01070	val_ssim:0.33295
+2022-10-20 10:34:24,501 main.py [line:422] INFO:	epoch:19      time:1845.84932s	lr:0.00010000	train_loss:0.6037767	val_loss:3.8176092	val_psnr:14.88709	val_ssim:0.33442
+2022-10-20 11:05:13,449 main.py [line:422] INFO:	epoch:20      time:1848.78555s	lr:0.00010000	train_loss:0.5926929	val_loss:1.6739174	val_psnr:16.20102	val_ssim:0.34470
+2022-10-20 11:35:59,235 main.py [line:422] INFO:	epoch:21      time:1845.61740s	lr:0.00010000	train_loss:0.5388733	val_loss:29.9193587	val_psnr:12.06178	val_ssim:0.30709
+2022-10-20 12:06:46,667 main.py [line:422] INFO:	epoch:22      time:1847.26159s	lr:0.00010000	train_loss:0.5256371	val_loss:7.7300638	val_psnr:13.23690	val_ssim:0.29651
+2022-10-20 12:37:35,692 main.py [line:422] INFO:	epoch:23      time:1848.86741s	lr:0.00010000	train_loss:0.4765301	val_loss:0.6247189	val_psnr:16.86057	val_ssim:0.36103
+2022-10-20 13:08:23,448 main.py [line:422] INFO:	epoch:24      time:1847.47678s	lr:0.00010000	train_loss:0.4683086	val_loss:20.3189033	val_psnr:12.04580	val_ssim:0.24024
+2022-10-20 13:39:09,440 main.py [line:422] INFO:	epoch:25      time:1845.82728s	lr:0.00010000	train_loss:0.4451929	val_loss:39.0240666	val_psnr:10.15117	val_ssim:0.22974
+2022-10-20 14:09:54,798 main.py [line:422] INFO:	epoch:26      time:1845.18705s	lr:0.00010000	train_loss:0.4102029	val_loss:21.4286259	val_psnr:13.70396	val_ssim:0.31098
+2022-10-20 14:40:44,278 main.py [line:422] INFO:	epoch:27      time:1849.31410s	lr:0.00010000	train_loss:0.4242432	val_loss:15.2065844	val_psnr:14.05323	val_ssim:0.28753
+2022-10-20 15:11:31,381 main.py [line:422] INFO:	epoch:28      time:1846.93342s	lr:0.00010000	train_loss:0.4113577	val_loss:13.9018797	val_psnr:12.90054	val_ssim:0.24871
+2022-10-20 15:42:17,851 main.py [line:422] INFO:	epoch:29      time:1846.30023s	lr:0.00010000	train_loss:0.4048034	val_loss:55.9145198	val_psnr:5.75625	val_ssim:0.17656
+2022-10-20 16:13:09,191 main.py [line:422] INFO:	epoch:30      time:1851.15338s	lr:0.00010000	train_loss:0.4096121	val_loss:1.8919100	val_psnr:16.76181	val_ssim:0.35971
+2022-10-20 16:43:56,409 main.py [line:422] INFO:	epoch:31      time:1847.04420s	lr:0.00010000	train_loss:0.3976111	val_loss:2.5798615	val_psnr:16.48823	val_ssim:0.35212
+2022-10-20 17:14:41,842 main.py [line:422] INFO:	epoch:32      time:1845.25374s	lr:0.00010000	train_loss:0.3726379	val_loss:1.5728228	val_psnr:16.69898	val_ssim:0.35168
+2022-10-20 17:45:23,718 main.py [line:422] INFO:	epoch:33      time:1841.71277s	lr:0.00010000	train_loss:0.3696182	val_loss:4.0885494	val_psnr:16.46264	val_ssim:0.34323
+2022-10-20 18:16:07,404 main.py [line:422] INFO:	epoch:34      time:1843.46411s	lr:0.00010000	train_loss:0.3813955	val_loss:0.9031949	val_psnr:16.82380	val_ssim:0.35420
+2022-10-20 18:46:51,996 main.py [line:422] INFO:	epoch:35      time:1844.41869s	lr:0.00010000	train_loss:0.3623275	val_loss:1.7674301	val_psnr:16.77439	val_ssim:0.35926
+2022-10-20 19:17:36,207 main.py [line:422] INFO:	epoch:36      time:1844.04844s	lr:0.00010000	train_loss:0.3473605	val_loss:1.3045584	val_psnr:16.51135	val_ssim:0.35214
+2022-10-20 19:48:24,232 main.py [line:422] INFO:	epoch:37      time:1847.85699s	lr:0.00010000	train_loss:0.3302226	val_loss:4.0372578	val_psnr:16.80988	val_ssim:0.35712
+2022-10-20 20:19:11,604 main.py [line:422] INFO:	epoch:38      time:1847.20848s	lr:0.00010000	train_loss:0.3404822	val_loss:8.3714470	val_psnr:16.27943	val_ssim:0.33545
+2022-10-20 20:49:58,649 main.py [line:422] INFO:	epoch:39      time:1846.88053s	lr:0.00010000	train_loss:0.3312618	val_loss:0.5063625	val_psnr:16.82926	val_ssim:0.36025
+2022-10-20 21:20:45,466 main.py [line:422] INFO:	epoch:40      time:1846.64319s	lr:0.00010000	train_loss:0.3370303	val_loss:1.1791379	val_psnr:16.85237	val_ssim:0.36027
+2022-10-20 21:51:32,737 main.py [line:422] INFO:	epoch:41      time:1847.10280s	lr:0.00010000	train_loss:0.3144965	val_loss:3.2111011	val_psnr:16.61184	val_ssim:0.35137
+2022-10-20 22:22:18,055 main.py [line:422] INFO:	epoch:42      time:1845.15577s	lr:0.00010000	train_loss:0.3015504	val_loss:5.5113835	val_psnr:16.62642	val_ssim:0.34989
+2022-10-20 22:53:04,741 main.py [line:422] INFO:	epoch:43      time:1846.51586s	lr:0.00010000	train_loss:0.2877407	val_loss:2.3294652	val_psnr:16.78934	val_ssim:0.35337
+2022-10-20 23:23:53,092 main.py [line:422] INFO:	epoch:44      time:1848.16950s	lr:0.00010000	train_loss:0.2867606	val_loss:2.1297016	val_psnr:16.84329	val_ssim:0.35945
+2022-10-20 23:54:38,875 main.py [line:422] INFO:	epoch:45      time:1845.59500s	lr:0.00010000	train_loss:0.1063484	val_loss:0.9315551	val_psnr:16.87559	val_ssim:0.36202
+2022-10-21 00:25:24,605 main.py [line:422] INFO:	epoch:46      time:1845.43589s	lr:0.00010000	train_loss:0.1041773	val_loss:4.3942715	val_psnr:16.71264	val_ssim:0.35250
+2022-10-21 00:56:09,954 main.py [line:422] INFO:	epoch:47      time:1845.17809s	lr:0.00010000	train_loss:0.1050015	val_loss:2.8199854	val_psnr:16.82926	val_ssim:0.35830
+2022-10-21 01:26:54,181 main.py [line:422] INFO:	epoch:48      time:1844.04201s	lr:0.00010000	train_loss:0.1007171	val_loss:0.3527192	val_psnr:16.86925	val_ssim:0.36221
+2022-10-21 01:57:40,934 main.py [line:422] INFO:	epoch:49      time:1846.40072s	lr:0.00010000	train_loss:0.1014980	val_loss:4.5340619	val_psnr:16.77099	val_ssim:0.35325
+2022-10-21 02:28:28,097 main.py [line:422] INFO:	epoch:50      time:1846.99593s	lr:0.00010000	train_loss:0.1019069	val_loss:3.7498944	val_psnr:16.78959	val_ssim:0.35639
+2022-10-21 02:59:13,689 main.py [line:422] INFO:	epoch:51      time:1845.42548s	lr:0.00010000	train_loss:0.1035177	val_loss:7.9544304	val_psnr:16.54027	val_ssim:0.34446
+2022-10-21 03:29:58,705 main.py [line:422] INFO:	epoch:52      time:1844.81799s	lr:0.00010000	train_loss:0.1013206	val_loss:1.7766725	val_psnr:16.84565	val_ssim:0.36024
+2022-10-21 04:00:42,717 main.py [line:422] INFO:	epoch:53      time:1843.84455s	lr:0.00010000	train_loss:0.1021689	val_loss:9.7064840	val_psnr:16.54482	val_ssim:0.34710
+2022-10-21 04:31:28,120 main.py [line:422] INFO:	epoch:54      time:1845.23784s	lr:0.00010000	train_loss:0.0985287	val_loss:5.1385197	val_psnr:16.75769	val_ssim:0.35727
+2022-10-21 05:02:11,852 main.py [line:422] INFO:	epoch:55      time:1843.57302s	lr:0.00010000	train_loss:0.1016828	val_loss:8.7445690	val_psnr:15.89812	val_ssim:0.31913
+2022-10-21 05:32:57,731 main.py [line:422] INFO:	epoch:56      time:1845.71293s	lr:0.00010000	train_loss:0.1001617	val_loss:2.3548356	val_psnr:16.83369	val_ssim:0.35917
+2022-10-21 06:03:43,156 main.py [line:422] INFO:	epoch:57      time:1845.25590s	lr:0.00010000	train_loss:0.0988087	val_loss:4.4952628	val_psnr:16.70639	val_ssim:0.35303
+2022-10-21 06:34:35,244 main.py [line:422] INFO:	epoch:58      time:1851.89756s	lr:0.00010000	train_loss:0.0996310	val_loss:1.0985922	val_psnr:16.85838	val_ssim:0.36046
+2022-10-21 07:05:22,062 main.py [line:422] INFO:	epoch:59      time:1846.62848s	lr:0.00010000	train_loss:0.0974157	val_loss:2.2416191	val_psnr:16.82984	val_ssim:0.35729
+2022-10-21 07:36:07,350 main.py [line:422] INFO:	epoch:60      time:1845.10972s	lr:0.00010000	train_loss:0.0952680	val_loss:0.7745833	val_psnr:16.86047	val_ssim:0.36223
+2022-10-21 08:06:51,403 main.py [line:422] INFO:	epoch:61      time:1843.77291s	lr:0.00010000	train_loss:0.0966852	val_loss:0.2853134	val_psnr:16.88267	val_ssim:0.36275
+2022-10-21 08:37:35,129 main.py [line:422] INFO:	epoch:62      time:1843.43062s	lr:0.00010000	train_loss:0.0964082	val_loss:2.5628657	val_psnr:16.69816	val_ssim:0.35315
+2022-10-21 09:08:21,549 main.py [line:422] INFO:	epoch:63      time:1846.25012s	lr:0.00010000	train_loss:0.0944939	val_loss:1.1801377	val_psnr:16.82907	val_ssim:0.35666
+2022-10-21 09:39:09,536 main.py [line:422] INFO:	epoch:64      time:1847.75660s	lr:0.00010000	train_loss:0.0937056	val_loss:0.5532391	val_psnr:16.85317	val_ssim:0.36048
+2022-10-21 09:57:35,053 main.py [line:318] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 09:57:35,094 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 09:57:35,095 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 09:57:36,281 main.py [line:341] INFO:	Load checkpoint at epoch 61.
+2022-10-21 09:57:36,281 main.py [line:342] INFO:	Current learning rate is 0.0001.
+2022-10-21 09:57:36,282 main.py [line:343] INFO:	Current best ssim in train phase is 0.36275342181958303.
+2022-10-21 09:57:36,282 main.py [line:344] INFO:	The model is loaded.
+2022-10-21 09:58:07,300 main.py [line:378] INFO:	Now testing self-supervised MRI reconstruction.
+2022-10-21 09:59:53,733 main.py [line:391] INFO:	time:106.43148s	test_loss:0.6084513	test_psnr:16.84802	test_ssim:0.34147
+2022-10-21 10:07:46,705 main.py [line:318] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 10:07:46,741 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 10:07:46,742 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 10:07:47,049 main.py [line:348] INFO:	Initialize model with xavier.
+2022-10-21 10:08:19,761 main.py [line:396] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 18:23:12,581 main.py [line:318] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 18:23:12,635 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 18:23:12,636 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 18:23:12,939 main.py [line:348] INFO:	Initialize model with xavier.
+2022-10-21 18:23:45,377 main.py [line:396] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 18:58:11,772 main.py [line:319] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 18:58:11,815 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 18:58:11,815 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 18:58:12,112 main.py [line:349] INFO:	Initialize model with xavier.
+2022-10-21 18:58:49,886 main.py [line:319] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 18:58:49,926 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 18:58:49,926 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 18:58:50,201 main.py [line:349] INFO:	Initialize model with xavier.
+2022-10-21 18:59:21,756 main.py [line:397] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 19:21:44,628 main.py [line:319] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 19:21:44,663 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 19:21:44,664 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 19:21:44,988 main.py [line:349] INFO:	Initialize model with xavier.
+2022-10-21 19:22:17,117 main.py [line:397] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 19:27:37,092 main.py [line:319] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 19:27:37,130 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 19:27:37,130 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 19:27:37,433 main.py [line:349] INFO:	Initialize model with xavier.
+2022-10-21 19:28:09,428 main.py [line:397] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 19:42:17,396 main.py [line:319] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 19:42:17,432 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 19:42:17,433 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 19:42:17,764 main.py [line:349] INFO:	Initialize model with xavier.
+2022-10-21 19:42:50,318 main.py [line:397] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 20:00:49,557 main.py [line:319] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 20:00:49,591 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 20:00:49,591 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 20:00:49,924 main.py [line:349] INFO:	Initialize model with xavier.
+2022-10-21 20:01:22,249 main.py [line:397] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 20:02:51,888 main.py [line:319] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 20:02:51,921 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 20:02:51,921 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 20:02:52,219 main.py [line:349] INFO:	Initialize model with xavier.
+2022-10-21 20:03:24,166 main.py [line:397] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 20:04:34,840 main.py [line:319] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 20:04:34,875 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 20:04:34,875 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 20:04:51,080 main.py [line:319] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 20:04:51,116 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 20:04:51,116 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 20:04:51,445 main.py [line:349] INFO:	Initialize model with xavier.
+2022-10-21 20:05:22,884 main.py [line:397] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 20:09:10,333 main.py [line:319] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 20:09:10,374 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 20:09:10,374 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 20:09:10,709 main.py [line:349] INFO:	Initialize model with xavier.
+2022-10-21 20:09:43,147 main.py [line:397] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 20:13:34,130 main.py [line:320] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 20:13:34,177 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 20:13:34,177 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 20:13:34,513 main.py [line:350] INFO:	Initialize model with xavier.
+2022-10-21 20:14:06,721 main.py [line:398] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 20:15:36,429 main.py [line:320] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 20:15:36,465 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 20:15:36,465 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 20:15:36,744 main.py [line:350] INFO:	Initialize model with xavier.
+2022-10-21 20:16:08,542 main.py [line:398] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 20:19:14,086 main.py [line:320] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 20:19:14,132 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 20:19:14,132 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 20:19:14,471 main.py [line:350] INFO:	Initialize model with xavier.
+2022-10-21 20:19:45,802 main.py [line:398] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 20:24:31,165 main.py [line:320] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 20:24:31,199 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 20:24:31,199 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 20:24:31,483 main.py [line:350] INFO:	Initialize model with xavier.
+2022-10-21 20:25:02,808 main.py [line:398] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 20:27:25,942 main.py [line:320] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 20:27:25,994 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 20:27:25,994 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 20:27:26,293 main.py [line:350] INFO:	Initialize model with xavier.
+2022-10-21 20:27:35,822 main.py [line:321] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-21 20:27:35,855 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-21 20:27:35,855 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-21 20:27:36,142 main.py [line:351] INFO:	Initialize model with xavier.
+2022-10-21 20:28:08,085 main.py [line:399] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-21 20:56:04,228 main.py [line:425] INFO:	epoch:1       time:1676.14066s	lr:0.00010000	train_loss:1698053.8546111	val_loss:3529215.5842500	val_psnr:-8.34280	val_ssim:0.00015
+2022-10-21 21:23:57,945 main.py [line:425] INFO:	epoch:2       time:1673.41179s	lr:0.00010000	train_loss:83979.2827656	val_loss:412398.1577174	val_psnr:10.25875	val_ssim:0.08798
+2022-10-21 21:51:48,540 main.py [line:425] INFO:	epoch:3       time:1670.29077s	lr:0.00010000	train_loss:4070.8802030	val_loss:40630.8505674	val_psnr:14.80361	val_ssim:0.23494
+2022-10-21 22:19:37,390 main.py [line:425] INFO:	epoch:4       time:1668.57421s	lr:0.00010000	train_loss:825.8587429	val_loss:29211.3135934	val_psnr:14.94483	val_ssim:0.28338
+2022-10-21 22:47:29,202 main.py [line:425] INFO:	epoch:5       time:1671.52138s	lr:0.00010000	train_loss:231.8621908	val_loss:27102.1078976	val_psnr:14.74848	val_ssim:0.29056
+2022-10-21 23:15:19,340 main.py [line:425] INFO:	epoch:6       time:1669.82973s	lr:0.00010000	train_loss:72.0911136	val_loss:9141.0791794	val_psnr:15.91878	val_ssim:0.33149
+2022-10-21 23:43:08,710 main.py [line:425] INFO:	epoch:7       time:1669.10626s	lr:0.00010000	train_loss:27.6268748	val_loss:2450.6527572	val_psnr:16.34754	val_ssim:0.33796
+2022-10-22 00:11:03,828 main.py [line:425] INFO:	epoch:8       time:1674.83778s	lr:0.00010000	train_loss:12.8939612	val_loss:6481.6810593	val_psnr:15.87945	val_ssim:0.32941
+2022-10-22 00:38:58,084 main.py [line:425] INFO:	epoch:9       time:1674.08247s	lr:0.00010000	train_loss:5.9694821	val_loss:651.4174355	val_psnr:16.62719	val_ssim:0.34922
+2022-10-22 01:06:50,714 main.py [line:425] INFO:	epoch:10      time:1672.33561s	lr:0.00010000	train_loss:67.3209026	val_loss:46.5298674	val_psnr:16.67277	val_ssim:0.35525
+2022-10-22 01:34:40,302 main.py [line:425] INFO:	epoch:11      time:1669.25388s	lr:0.00010000	train_loss:4.4086356	val_loss:36.6419982	val_psnr:16.69643	val_ssim:0.35776
+2022-10-22 02:02:32,610 main.py [line:425] INFO:	epoch:12      time:1671.98476s	lr:0.00010000	train_loss:2.2957149	val_loss:8.4027542	val_psnr:16.76054	val_ssim:0.36181
+2022-10-22 02:30:22,517 main.py [line:425] INFO:	epoch:13      time:1669.63595s	lr:0.00010000	train_loss:0.9616734	val_loss:28.3004637	val_psnr:16.70235	val_ssim:0.35836
+2022-10-22 02:58:11,964 main.py [line:425] INFO:	epoch:14      time:1669.26859s	lr:0.00010000	train_loss:6.7921858	val_loss:1.7454772	val_psnr:16.76305	val_ssim:0.36309
+2022-10-22 03:26:01,788 main.py [line:425] INFO:	epoch:15      time:1669.55906s	lr:0.00010000	train_loss:0.4214574	val_loss:1.8619313	val_psnr:16.74575	val_ssim:0.36366
+2022-10-22 03:53:55,059 main.py [line:425] INFO:	epoch:16      time:1672.97670s	lr:0.00010000	train_loss:0.3244749	val_loss:2264.9912158	val_psnr:15.71055	val_ssim:0.34083
+2022-10-22 04:21:44,970 main.py [line:425] INFO:	epoch:17      time:1669.73210s	lr:0.00010000	train_loss:0.2599518	val_loss:24.6027925	val_psnr:16.74202	val_ssim:0.36072
+2022-10-22 04:49:34,277 main.py [line:425] INFO:	epoch:18      time:1669.13287s	lr:0.00010000	train_loss:0.4914439	val_loss:4.9926170	val_psnr:16.75357	val_ssim:0.36277
+2022-10-22 05:17:27,946 main.py [line:425] INFO:	epoch:19      time:1673.48930s	lr:0.00010000	train_loss:0.1257666	val_loss:10.2764454	val_psnr:16.73572	val_ssim:0.36213
+2022-10-22 05:45:22,913 main.py [line:425] INFO:	epoch:20      time:1674.79123s	lr:0.00010000	train_loss:0.1141268	val_loss:26.9010744	val_psnr:16.73924	val_ssim:0.36139
+2022-10-22 06:13:14,692 main.py [line:425] INFO:	epoch:21      time:1671.60603s	lr:0.00010000	train_loss:0.0848036	val_loss:992.1349163	val_psnr:15.74026	val_ssim:0.30146
+2022-10-22 06:41:04,359 main.py [line:425] INFO:	epoch:22      time:1669.49608s	lr:0.00010000	train_loss:0.7232837	val_loss:100.4655367	val_psnr:16.72103	val_ssim:0.34767
+2022-10-22 07:08:53,253 main.py [line:425] INFO:	epoch:23      time:1668.71857s	lr:0.00010000	train_loss:0.0751020	val_loss:1124.8639004	val_psnr:15.62858	val_ssim:0.29323
+2022-10-22 07:36:46,228 main.py [line:425] INFO:	epoch:24      time:1672.74281s	lr:0.00010000	train_loss:0.0589098	val_loss:46.4619836	val_psnr:16.64510	val_ssim:0.34949
+2022-10-22 08:04:39,953 main.py [line:425] INFO:	epoch:25      time:1673.54032s	lr:0.00010000	train_loss:0.0619413	val_loss:9.8954869	val_psnr:16.71860	val_ssim:0.35939
+2022-10-22 08:32:28,724 main.py [line:425] INFO:	epoch:26      time:1668.59631s	lr:0.00010000	train_loss:0.2278347	val_loss:1.8005809	val_psnr:16.76047	val_ssim:0.36372
+2022-10-22 09:00:18,003 main.py [line:425] INFO:	epoch:27      time:1668.98631s	lr:0.00010000	train_loss:0.0671953	val_loss:2.7569141	val_psnr:16.76067	val_ssim:0.36403
+2022-10-22 09:28:07,085 main.py [line:425] INFO:	epoch:28      time:1668.80869s	lr:0.00010000	train_loss:0.0421785	val_loss:2.3110644	val_psnr:16.75343	val_ssim:0.36344
+2022-10-22 09:55:58,721 main.py [line:425] INFO:	epoch:29      time:1671.46371s	lr:0.00010000	train_loss:0.0427349	val_loss:11.5042582	val_psnr:16.75109	val_ssim:0.36313
+2022-10-22 10:23:49,032 main.py [line:425] INFO:	epoch:30      time:1670.12931s	lr:0.00010000	train_loss:0.0371239	val_loss:2232.2656055	val_psnr:16.36377	val_ssim:0.34721
+2022-10-22 10:51:36,965 main.py [line:425] INFO:	epoch:31      time:1667.76534s	lr:0.00010000	train_loss:0.3040100	val_loss:127.0837985	val_psnr:16.74793	val_ssim:0.36143
+2022-10-22 11:19:21,307 main.py [line:425] INFO:	epoch:32      time:1664.16569s	lr:0.00010000	train_loss:0.0332645	val_loss:191.5746962	val_psnr:16.74383	val_ssim:0.36108
+2022-10-22 11:47:04,137 main.py [line:425] INFO:	epoch:33      time:1662.65946s	lr:0.00010000	train_loss:0.0256351	val_loss:3591.2687795	val_psnr:16.22182	val_ssim:0.34471
+2022-10-22 12:14:49,148 main.py [line:425] INFO:	epoch:34      time:1664.84747s	lr:0.00010000	train_loss:0.0232195	val_loss:46.5442360	val_psnr:16.75659	val_ssim:0.36305
+2022-10-22 12:42:36,801 main.py [line:425] INFO:	epoch:35      time:1667.48298s	lr:0.00010000	train_loss:0.0738065	val_loss:3.4894011	val_psnr:16.74710	val_ssim:0.36156
+2022-10-22 13:10:19,514 main.py [line:425] INFO:	epoch:36      time:1662.53896s	lr:0.00010000	train_loss:0.0175530	val_loss:2.1499591	val_psnr:16.75324	val_ssim:0.36341
+2022-10-22 13:38:04,540 main.py [line:425] INFO:	epoch:37      time:1664.78479s	lr:0.00010000	train_loss:0.0190563	val_loss:4.9829753	val_psnr:16.75085	val_ssim:0.36244
+2022-10-22 14:05:58,134 main.py [line:425] INFO:	epoch:38      time:1673.42219s	lr:0.00010000	train_loss:0.0195649	val_loss:43.8849617	val_psnr:16.72013	val_ssim:0.35571
+2022-10-22 14:27:44,160 main.py [line:321] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-22 14:27:44,207 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-22 14:27:44,207 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-22 14:27:44,466 main.py [line:351] INFO:	Initialize model with xavier.
+2022-10-22 14:28:51,549 main.py [line:321] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-22 14:28:51,591 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-22 14:28:51,591 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-22 14:28:51,850 main.py [line:351] INFO:	Initialize model with xavier.
+2022-10-22 14:28:58,435 main.py [line:399] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-22 14:29:58,709 main.py [line:321] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-22 14:29:58,753 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-22 14:29:58,754 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-22 14:29:59,007 main.py [line:351] INFO:	Initialize model with xavier.
+2022-10-22 14:30:05,608 main.py [line:399] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-24 10:48:39,384 main.py [line:324] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 10:48:39,419 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 10:48:39,419 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 10:48:39,951 main.py [line:354] INFO:	Initialize model with xavier.
+2022-10-24 10:49:25,144 main.py [line:324] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 10:49:25,180 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 10:49:25,181 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 10:49:25,699 main.py [line:354] INFO:	Initialize model with xavier.
+2022-10-24 10:50:02,103 main.py [line:403] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-24 17:25:10,602 main_test.py [line:326] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 17:25:10,650 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 17:25:10,650 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 17:28:34,684 main.py [line:326] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 17:28:34,728 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 17:28:34,729 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 17:29:02,931 main.py [line:326] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 17:29:02,970 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 17:29:02,970 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 17:29:58,498 main.py [line:326] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 17:29:58,545 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 17:29:58,545 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 17:30:05,790 main.py [line:326] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 17:30:05,835 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 17:30:05,835 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 17:30:05,957 main.py [line:356] INFO:	Initialize model with xavier.
+2022-10-24 17:30:12,492 main.py [line:405] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-24 17:30:44,117 main_test.py [line:326] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 17:30:44,164 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 17:30:44,164 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 17:30:45,363 main_test.py [line:349] INFO:	Load checkpoint at epoch 127.
+2022-10-24 17:30:45,363 main_test.py [line:350] INFO:	Current learning rate is 0.0001.
+2022-10-24 17:30:45,363 main_test.py [line:351] INFO:	Current best ssim in train phase is 0.41586053220742364.
+2022-10-24 17:30:45,363 main_test.py [line:352] INFO:	The model is loaded.
+2022-10-24 17:30:51,026 main_test.py [line:387] INFO:	Now testing self-supervised MRI reconstruction.
+2022-10-24 17:31:25,374 main_test.py [line:400] INFO:	time:34.34692s	test_loss:0.0182565	test_psnr:18.91619	test_ssim:0.46987
+2022-10-24 17:42:50,184 main.py [line:328] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 17:42:50,229 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 17:42:50,229 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 17:42:51,435 main.py [line:351] INFO:	Load checkpoint at epoch 127.
+2022-10-24 17:42:51,435 main.py [line:352] INFO:	Current learning rate is 0.0001.
+2022-10-24 17:42:51,435 main.py [line:353] INFO:	Current best ssim in train phase is 0.41586053220742364.
+2022-10-24 17:42:51,435 main.py [line:354] INFO:	The model is loaded.
+2022-10-24 17:42:57,103 main.py [line:407] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-24 17:48:14,421 main.py [line:329] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 17:48:14,462 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 17:48:14,462 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 17:48:15,663 main.py [line:352] INFO:	Load checkpoint at epoch 127.
+2022-10-24 17:48:15,663 main.py [line:353] INFO:	Current learning rate is 0.0001.
+2022-10-24 17:48:15,663 main.py [line:354] INFO:	Current best ssim in train phase is 0.41586053220742364.
+2022-10-24 17:48:15,663 main.py [line:355] INFO:	The model is loaded.
+2022-10-24 17:48:21,293 main.py [line:408] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-24 17:49:25,014 main.py [line:434] INFO:	epoch:128     time:63.71852s	lr:0.00010000	train_loss:0.0079122	val_loss:0.0184575	val_psnr:18.21892	val_ssim:0.39956
+2022-10-24 17:50:26,759 main.py [line:434] INFO:	epoch:129     time:61.67364s	lr:0.00010000	train_loss:0.0075053	val_loss:0.0189692	val_psnr:18.25486	val_ssim:0.39665
+2022-10-24 17:51:27,162 main.py [line:434] INFO:	epoch:130     time:60.32871s	lr:0.00010000	train_loss:0.0073270	val_loss:0.0192143	val_psnr:18.15070	val_ssim:0.40702
+2022-10-24 17:52:27,884 main.py [line:434] INFO:	epoch:131     time:60.65914s	lr:0.00010000	train_loss:0.0071146	val_loss:0.0188289	val_psnr:18.26272	val_ssim:0.41140
+2022-10-24 17:53:29,210 main.py [line:434] INFO:	epoch:132     time:61.25429s	lr:0.00010000	train_loss:0.0073892	val_loss:0.0192952	val_psnr:18.06600	val_ssim:0.39447
+2022-10-24 17:54:29,848 main.py [line:434] INFO:	epoch:133     time:60.56600s	lr:0.00010000	train_loss:0.0071965	val_loss:0.0187627	val_psnr:18.20805	val_ssim:0.40126
+2022-10-24 17:55:30,175 main.py [line:434] INFO:	epoch:134     time:60.26428s	lr:0.00010000	train_loss:0.0071201	val_loss:0.0195705	val_psnr:17.95372	val_ssim:0.40926
+2022-10-24 17:56:31,733 main.py [line:434] INFO:	epoch:135     time:61.48937s	lr:0.00010000	train_loss:0.0072915	val_loss:0.0192008	val_psnr:18.14811	val_ssim:0.40494
+2022-10-24 17:57:32,330 main.py [line:434] INFO:	epoch:136     time:60.52781s	lr:0.00010000	train_loss:0.0071517	val_loss:0.0190055	val_psnr:18.21332	val_ssim:0.41241
+2022-10-24 17:58:33,882 main.py [line:434] INFO:	epoch:137     time:61.48416s	lr:0.00010000	train_loss:0.0065535	val_loss:0.0191021	val_psnr:18.15763	val_ssim:0.40952
+2022-10-24 17:59:35,520 main.py [line:434] INFO:	epoch:138     time:61.56825s	lr:0.00010000	train_loss:0.0074330	val_loss:0.0189687	val_psnr:18.13489	val_ssim:0.40833
+2022-10-24 18:00:35,918 main.py [line:434] INFO:	epoch:139     time:60.32883s	lr:0.00010000	train_loss:0.0067533	val_loss:0.0185796	val_psnr:18.24509	val_ssim:0.40497
+2022-10-24 18:00:48,878 main.py [line:331] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 18:00:48,926 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 18:00:48,926 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 18:00:50,112 main.py [line:354] INFO:	Load checkpoint at epoch 127.
+2022-10-24 18:00:50,112 main.py [line:355] INFO:	Current learning rate is 0.0001.
+2022-10-24 18:00:50,112 main.py [line:356] INFO:	Current best ssim in train phase is 0.41586053220742364.
+2022-10-24 18:00:50,112 main.py [line:357] INFO:	The model is loaded.
+2022-10-24 18:00:55,587 main.py [line:410] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-24 18:02:07,002 main.py [line:436] INFO:	epoch:128     time:71.41241s	lr:0.00010000	train_loss:0.0073019	val_loss:0.0200600	val_psnr:0.00000	val_ssim:0.00000
+2022-10-24 18:03:02,206 main.py [line:335] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 18:03:02,255 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 18:03:02,256 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 18:03:03,468 main.py [line:358] INFO:	Load checkpoint at epoch 127.
+2022-10-24 18:03:03,468 main.py [line:359] INFO:	Current learning rate is 0.0001.
+2022-10-24 18:03:03,468 main.py [line:360] INFO:	Current best ssim in train phase is 0.41586053220742364.
+2022-10-24 18:03:03,468 main.py [line:361] INFO:	The model is loaded.
+2022-10-24 18:03:09,167 main.py [line:414] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-24 18:04:20,329 main.py [line:440] INFO:	epoch:128     time:71.16008s	lr:0.00010000	train_loss:0.0077403	val_loss:22.4288216	val_psnr:0.54656	val_ssim:0.01872
+2022-10-24 18:05:29,716 main.py [line:440] INFO:	epoch:129     time:69.19995s	lr:0.00010000	train_loss:0.0071936	val_loss:22.7714844	val_psnr:0.55488	val_ssim:0.01857
+2022-10-24 18:06:38,282 main.py [line:440] INFO:	epoch:130     time:68.40178s	lr:0.00010000	train_loss:0.0074767	val_loss:22.6328297	val_psnr:0.55083	val_ssim:0.01880
+2022-10-24 18:07:45,900 main.py [line:440] INFO:	epoch:131     time:67.42727s	lr:0.00010000	train_loss:0.0070952	val_loss:22.8990669	val_psnr:0.55915	val_ssim:0.01866
+2022-10-24 18:08:54,206 main.py [line:440] INFO:	epoch:132     time:68.12344s	lr:0.00010000	train_loss:0.0079692	val_loss:22.3623009	val_psnr:0.54494	val_ssim:0.01859
+2022-10-24 18:10:03,736 main.py [line:440] INFO:	epoch:133     time:69.35579s	lr:0.00010000	train_loss:0.0074818	val_loss:22.5671482	val_psnr:0.54751	val_ssim:0.01855
+2022-10-24 18:10:51,131 main.py [line:341] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 18:10:51,179 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 18:10:51,179 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 18:10:52,389 main.py [line:364] INFO:	Load checkpoint at epoch 127.
+2022-10-24 18:10:52,389 main.py [line:365] INFO:	Current learning rate is 0.0001.
+2022-10-24 18:10:52,389 main.py [line:366] INFO:	Current best ssim in train phase is 0.41586053220742364.
+2022-10-24 18:10:52,389 main.py [line:367] INFO:	The model is loaded.
+2022-10-24 18:10:57,943 main.py [line:420] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-24 18:12:14,257 main.py [line:446] INFO:	epoch:128     time:76.31211s	lr:0.00010000	train_loss:0.0080960	val_loss:0.0187690	val_psnr:18.22043	val_ssim:0.39632
+2022-10-24 18:13:28,861 main.py [line:446] INFO:	epoch:129     time:74.53192s	lr:0.00010000	train_loss:0.0079099	val_loss:0.0190716	val_psnr:18.16830	val_ssim:0.40342
+2022-10-24 18:14:42,480 main.py [line:446] INFO:	epoch:130     time:73.56966s	lr:0.00010000	train_loss:0.0070267	val_loss:0.0192236	val_psnr:18.14989	val_ssim:0.40913
+2022-10-24 18:15:55,754 main.py [line:446] INFO:	epoch:131     time:73.21933s	lr:0.00010000	train_loss:0.0076106	val_loss:0.0198970	val_psnr:18.09799	val_ssim:0.40961
+2022-10-24 18:17:09,337 main.py [line:446] INFO:	epoch:132     time:73.52824s	lr:0.00010000	train_loss:0.0069722	val_loss:0.0185452	val_psnr:18.28468	val_ssim:0.40414
+2022-10-24 18:18:24,429 main.py [line:446] INFO:	epoch:133     time:75.04026s	lr:0.00010000	train_loss:0.0068412	val_loss:0.0181466	val_psnr:18.32473	val_ssim:0.40708
+2022-10-24 18:19:38,563 main.py [line:446] INFO:	epoch:134     time:74.08036s	lr:0.00010000	train_loss:0.0072736	val_loss:0.0190684	val_psnr:18.23324	val_ssim:0.40773
+2022-10-24 18:20:52,858 main.py [line:446] INFO:	epoch:135     time:74.24059s	lr:0.00010000	train_loss:0.0067223	val_loss:0.0199988	val_psnr:17.96851	val_ssim:0.40035
+2022-10-24 18:22:06,840 main.py [line:446] INFO:	epoch:136     time:73.92907s	lr:0.00010000	train_loss:0.0077183	val_loss:0.0193688	val_psnr:18.14710	val_ssim:0.41253
+2022-10-24 18:23:21,433 main.py [line:446] INFO:	epoch:137     time:74.53917s	lr:0.00010000	train_loss:0.0070145	val_loss:0.0188706	val_psnr:18.22959	val_ssim:0.40725
+2022-10-24 18:24:35,680 main.py [line:446] INFO:	epoch:138     time:74.19367s	lr:0.00010000	train_loss:0.0074349	val_loss:0.0189224	val_psnr:18.20817	val_ssim:0.40945
+2022-10-24 18:25:49,413 main.py [line:446] INFO:	epoch:139     time:73.68165s	lr:0.00010000	train_loss:0.0064921	val_loss:0.0185700	val_psnr:18.24890	val_ssim:0.40752
+2022-10-24 18:27:03,304 main.py [line:446] INFO:	epoch:140     time:73.83928s	lr:0.00010000	train_loss:0.0070857	val_loss:0.0185995	val_psnr:18.22024	val_ssim:0.40383
+2022-10-24 18:28:17,683 main.py [line:446] INFO:	epoch:141     time:74.32437s	lr:0.00010000	train_loss:0.0068346	val_loss:0.0192126	val_psnr:18.16567	val_ssim:0.40522
+2022-10-24 18:29:36,565 main.py [line:341] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 18:29:36,607 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 18:29:36,607 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 18:29:37,813 main.py [line:364] INFO:	Load checkpoint at epoch 127.
+2022-10-24 18:29:37,813 main.py [line:365] INFO:	Current learning rate is 0.0001.
+2022-10-24 18:29:37,813 main.py [line:366] INFO:	Current best ssim in train phase is 0.41586053220742364.
+2022-10-24 18:29:37,813 main.py [line:367] INFO:	The model is loaded.
+2022-10-24 18:29:43,439 main.py [line:402] INFO:	Now testing self-supervised MRI reconstruction.
+2022-10-24 18:30:17,810 main.py [line:415] INFO:	time:34.36957s	test_loss:0.0182722	test_psnr:18.93184	test_ssim:0.47060
+2022-10-24 19:49:55,094 main.py [line:346] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 19:49:55,133 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 19:49:55,133 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 19:49:55,287 main.py [line:376] INFO:	Initialize model with xavier.
+2022-10-24 19:50:02,056 main.py [line:425] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-24 20:05:39,052 main.py [line:343] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 20:05:39,098 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 20:05:39,098 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 20:05:39,222 main.py [line:373] INFO:	Initialize model with xavier.
+2022-10-24 20:05:42,357 main.py [line:422] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-24 20:06:15,983 main.py [line:448] INFO:	epoch:1       time:33.62450s	lr:0.00010000	train_loss:0.2038201	val_loss:0.1232117	val_psnr:9.88983	val_ssim:0.21983
+2022-10-24 20:06:47,129 main.py [line:448] INFO:	epoch:2       time:31.02813s	lr:0.00010000	train_loss:0.1995042	val_loss:0.1208572	val_psnr:9.94734	val_ssim:0.21978
+2022-10-24 20:07:18,654 main.py [line:448] INFO:	epoch:3       time:31.45392s	lr:0.00010000	train_loss:0.1794392	val_loss:0.1203091	val_psnr:9.95909	val_ssim:0.21987
+2022-10-24 20:07:49,872 main.py [line:448] INFO:	epoch:4       time:31.10243s	lr:0.00010000	train_loss:0.1659737	val_loss:0.1206831	val_psnr:9.94331	val_ssim:0.22013
+2022-10-24 20:08:22,131 main.py [line:448] INFO:	epoch:5       time:32.14528s	lr:0.00010000	train_loss:0.1492351	val_loss:0.1052717	val_psnr:10.57652	val_ssim:0.24191
+2022-10-24 20:08:37,059 main.py [line:345] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 20:08:37,105 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 20:08:37,105 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 20:08:37,231 main.py [line:375] INFO:	Initialize model with xavier.
+2022-10-24 20:08:40,367 main.py [line:424] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-24 20:09:14,785 main.py [line:450] INFO:	epoch:1       time:34.41681s	lr:0.00010000	train_loss:0.4258462	val_loss:0.1902848	val_psnr:9.73589	val_ssim:0.20503
+2022-10-24 20:09:45,655 main.py [line:450] INFO:	epoch:2       time:30.75224s	lr:0.00010000	train_loss:0.3260054	val_loss:0.1806618	val_psnr:9.93837	val_ssim:0.21985
+2022-10-24 20:10:18,104 main.py [line:450] INFO:	epoch:3       time:32.33609s	lr:0.00010000	train_loss:0.2867253	val_loss:0.1790027	val_psnr:9.96968	val_ssim:0.22012
+2022-10-24 20:10:49,781 main.py [line:450] INFO:	epoch:4       time:31.57205s	lr:0.00010000	train_loss:0.2327612	val_loss:0.1813680	val_psnr:9.92225	val_ssim:0.21962
+2022-10-24 20:11:20,879 main.py [line:450] INFO:	epoch:5       time:31.02888s	lr:0.00010000	train_loss:0.2282530	val_loss:0.1813255	val_psnr:9.91794	val_ssim:0.22073
+2022-10-24 20:11:52,102 main.py [line:450] INFO:	epoch:6       time:31.10720s	lr:0.00010000	train_loss:0.2096244	val_loss:0.1569304	val_psnr:10.45156	val_ssim:0.24848
+2022-10-24 20:12:23,624 main.py [line:450] INFO:	epoch:7       time:31.40655s	lr:0.00010000	train_loss:0.2068461	val_loss:0.1569667	val_psnr:10.49675	val_ssim:0.24682
+2022-10-24 20:12:54,910 main.py [line:450] INFO:	epoch:8       time:31.22526s	lr:0.00010000	train_loss:0.1855599	val_loss:0.1320204	val_psnr:11.11827	val_ssim:0.26398
+2022-10-24 20:13:25,932 main.py [line:450] INFO:	epoch:9       time:30.90741s	lr:0.00010000	train_loss:0.1836588	val_loss:0.1354161	val_psnr:11.00662	val_ssim:0.25718
+2022-10-24 20:13:57,480 main.py [line:450] INFO:	epoch:10      time:31.47497s	lr:0.00010000	train_loss:0.1962652	val_loss:0.1179834	val_psnr:11.47239	val_ssim:0.26737
+2022-10-24 20:14:28,847 main.py [line:450] INFO:	epoch:11      time:31.25297s	lr:0.00010000	train_loss:0.1940804	val_loss:0.1508305	val_psnr:10.55695	val_ssim:0.21816
+2022-10-24 20:15:01,492 main.py [line:450] INFO:	epoch:12      time:32.57438s	lr:0.00010000	train_loss:0.1823099	val_loss:0.1498697	val_psnr:10.59302	val_ssim:0.21094
+2022-10-24 20:15:34,343 main.py [line:450] INFO:	epoch:13      time:32.78659s	lr:0.00010000	train_loss:0.1914805	val_loss:0.1536240	val_psnr:10.51958	val_ssim:0.20657
+2022-10-24 20:16:06,846 main.py [line:450] INFO:	epoch:14      time:32.43057s	lr:0.00010000	train_loss:0.1914572	val_loss:0.1612402	val_psnr:10.30545	val_ssim:0.19385
+2022-10-24 20:16:39,292 main.py [line:450] INFO:	epoch:15      time:32.38555s	lr:0.00010000	train_loss:0.1757395	val_loss:0.1588032	val_psnr:10.38286	val_ssim:0.20055
+2022-10-24 20:17:11,348 main.py [line:450] INFO:	epoch:16      time:31.98301s	lr:0.00010000	train_loss:0.1764714	val_loss:0.1394716	val_psnr:10.80886	val_ssim:0.22328
+2022-10-24 20:17:43,333 main.py [line:450] INFO:	epoch:17      time:31.91427s	lr:0.00010000	train_loss:0.1957728	val_loss:0.1430033	val_psnr:10.76296	val_ssim:0.22379
+2022-10-24 20:18:14,910 main.py [line:450] INFO:	epoch:18      time:31.50593s	lr:0.00010000	train_loss:0.1808899	val_loss:0.1447416	val_psnr:10.72717	val_ssim:0.21879
+2022-10-24 20:18:46,874 main.py [line:450] INFO:	epoch:19      time:31.89141s	lr:0.00010000	train_loss:0.1900211	val_loss:0.1453699	val_psnr:10.70272	val_ssim:0.22820
+2022-10-24 20:19:19,228 main.py [line:450] INFO:	epoch:20      time:32.27698s	lr:0.00010000	train_loss:0.1775657	val_loss:0.1328014	val_psnr:11.01649	val_ssim:0.23758
+2022-10-24 20:19:43,627 main.py [line:345] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 20:19:43,675 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 20:19:43,675 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 20:19:43,796 main.py [line:375] INFO:	Initialize model with xavier.
+2022-10-24 20:19:46,895 main.py [line:424] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-24 20:20:20,920 main.py [line:450] INFO:	epoch:1       time:34.01982s	lr:0.00010000	train_loss:0.4497454	val_loss:0.1814986	val_psnr:9.82921	val_ssim:0.18150
+2022-10-24 20:20:52,110 main.py [line:450] INFO:	epoch:2       time:31.08737s	lr:0.00010000	train_loss:0.3846695	val_loss:0.1794264	val_psnr:9.95760	val_ssim:0.21764
+2022-10-24 20:21:23,222 main.py [line:450] INFO:	epoch:3       time:30.99670s	lr:0.00010000	train_loss:0.2671928	val_loss:0.1804464	val_psnr:9.92283	val_ssim:0.21862
+2022-10-24 20:21:54,615 main.py [line:450] INFO:	epoch:4       time:31.27729s	lr:0.00010000	train_loss:0.2409057	val_loss:0.1806677	val_psnr:9.94601	val_ssim:0.21974
+2022-10-24 20:22:26,555 main.py [line:450] INFO:	epoch:5       time:31.82480s	lr:0.00010000	train_loss:0.2349270	val_loss:0.1798384	val_psnr:9.94892	val_ssim:0.22020
+2022-10-24 20:22:58,222 main.py [line:450] INFO:	epoch:6       time:31.56255s	lr:0.00010000	train_loss:0.2331249	val_loss:0.1785891	val_psnr:10.00729	val_ssim:0.22140
+2022-10-24 20:23:30,214 main.py [line:450] INFO:	epoch:7       time:31.88164s	lr:0.00010000	train_loss:0.2250748	val_loss:0.1783077	val_psnr:9.96295	val_ssim:0.22071
+2022-10-24 20:24:01,745 main.py [line:450] INFO:	epoch:8       time:31.45699s	lr:0.00010000	train_loss:0.2301386	val_loss:0.1814238	val_psnr:9.89188	val_ssim:0.21909
+2022-10-24 20:24:33,417 main.py [line:450] INFO:	epoch:9       time:31.60272s	lr:0.00010000	train_loss:0.2344777	val_loss:0.1769537	val_psnr:9.98460	val_ssim:0.22137
+2022-10-24 20:25:04,298 main.py [line:450] INFO:	epoch:10      time:30.82457s	lr:0.00010000	train_loss:0.2224598	val_loss:0.1789255	val_psnr:9.95553	val_ssim:0.22065
+2022-10-24 20:25:35,969 main.py [line:450] INFO:	epoch:11      time:31.60182s	lr:0.00010000	train_loss:0.2045357	val_loss:0.1602543	val_psnr:10.41267	val_ssim:0.23800
+2022-10-24 20:26:07,721 main.py [line:450] INFO:	epoch:12      time:31.63829s	lr:0.00010000	train_loss:0.2096364	val_loss:0.1655324	val_psnr:10.25742	val_ssim:0.23358
+2022-10-24 20:26:39,352 main.py [line:450] INFO:	epoch:13      time:31.57355s	lr:0.00010000	train_loss:0.1936747	val_loss:0.1538012	val_psnr:10.56770	val_ssim:0.24399
+2022-10-24 20:27:11,156 main.py [line:450] INFO:	epoch:14      time:31.69032s	lr:0.00010000	train_loss:0.1921719	val_loss:0.1614986	val_psnr:10.36234	val_ssim:0.23575
+2022-10-24 20:27:42,960 main.py [line:450] INFO:	epoch:15      time:31.73494s	lr:0.00010000	train_loss:0.1759896	val_loss:0.1629825	val_psnr:10.33718	val_ssim:0.23589
+2022-10-24 20:28:14,164 main.py [line:450] INFO:	epoch:16      time:31.13723s	lr:0.00010000	train_loss:0.1904145	val_loss:0.1561550	val_psnr:10.48780	val_ssim:0.24006
+2022-10-24 20:28:46,213 main.py [line:450] INFO:	epoch:17      time:31.97959s	lr:0.00010000	train_loss:0.1914989	val_loss:0.1673655	val_psnr:10.21985	val_ssim:0.23130
+2022-10-24 20:29:18,167 main.py [line:450] INFO:	epoch:18      time:31.88355s	lr:0.00010000	train_loss:0.1807228	val_loss:0.1618803	val_psnr:10.31606	val_ssim:0.22882
+2022-10-24 20:29:49,759 main.py [line:450] INFO:	epoch:19      time:31.52069s	lr:0.00010000	train_loss:0.1780688	val_loss:0.1510254	val_psnr:10.60571	val_ssim:0.23753
+2022-10-24 20:30:20,746 main.py [line:450] INFO:	epoch:20      time:30.91956s	lr:0.00010000	train_loss:0.1864958	val_loss:0.1513372	val_psnr:10.60748	val_ssim:0.23718
+2022-10-24 20:30:52,324 main.py [line:450] INFO:	epoch:21      time:31.50972s	lr:0.00010000	train_loss:0.2081469	val_loss:0.1599308	val_psnr:10.37477	val_ssim:0.22647
+2022-10-24 20:31:23,514 main.py [line:450] INFO:	epoch:22      time:31.12457s	lr:0.00010000	train_loss:0.1784848	val_loss:0.1473722	val_psnr:10.71736	val_ssim:0.23910
+2022-10-24 20:31:54,914 main.py [line:450] INFO:	epoch:23      time:31.33072s	lr:0.00010000	train_loss:0.1853625	val_loss:0.1556637	val_psnr:10.51153	val_ssim:0.22521
+2022-10-24 20:32:26,800 main.py [line:450] INFO:	epoch:24      time:31.81474s	lr:0.00010000	train_loss:0.1866906	val_loss:0.1564403	val_psnr:10.46167	val_ssim:0.21856
+2022-10-24 20:32:58,886 main.py [line:450] INFO:	epoch:25      time:32.01750s	lr:0.00010000	train_loss:0.1846496	val_loss:0.1443958	val_psnr:10.78794	val_ssim:0.22800
+2022-10-24 20:33:30,104 main.py [line:450] INFO:	epoch:26      time:31.15074s	lr:0.00010000	train_loss:0.1796892	val_loss:0.1464358	val_psnr:10.70335	val_ssim:0.22638
+2022-10-24 20:34:01,881 main.py [line:450] INFO:	epoch:27      time:31.70744s	lr:0.00010000	train_loss:0.1909625	val_loss:0.1528750	val_psnr:10.54605	val_ssim:0.21929
+2022-10-24 20:34:34,077 main.py [line:450] INFO:	epoch:28      time:32.12516s	lr:0.00010000	train_loss:0.1888797	val_loss:0.1413125	val_psnr:10.80284	val_ssim:0.23490
+2022-10-24 20:35:05,296 main.py [line:450] INFO:	epoch:29      time:31.14510s	lr:0.00010000	train_loss:0.1813677	val_loss:0.1480482	val_psnr:10.71284	val_ssim:0.23262
+2022-10-24 20:35:36,908 main.py [line:450] INFO:	epoch:30      time:31.54122s	lr:0.00010000	train_loss:0.1841050	val_loss:0.1370672	val_psnr:10.92103	val_ssim:0.23888
+2022-10-24 20:36:08,472 main.py [line:450] INFO:	epoch:31      time:31.49305s	lr:0.00010000	train_loss:0.1912110	val_loss:0.1519337	val_psnr:10.52609	val_ssim:0.22418
+2022-10-24 20:36:39,937 main.py [line:450] INFO:	epoch:32      time:31.39170s	lr:0.00010000	train_loss:0.1847795	val_loss:0.1603432	val_psnr:10.38223	val_ssim:0.21991
+2022-10-24 20:37:11,033 main.py [line:450] INFO:	epoch:33      time:31.02391s	lr:0.00010000	train_loss:0.1811096	val_loss:0.1395089	val_psnr:10.85974	val_ssim:0.23521
+2022-10-24 20:37:42,648 main.py [line:450] INFO:	epoch:34      time:31.54487s	lr:0.00010000	train_loss:0.1716302	val_loss:0.1513297	val_psnr:10.61563	val_ssim:0.22751
+2022-10-24 20:38:13,888 main.py [line:450] INFO:	epoch:35      time:31.17155s	lr:0.00010000	train_loss:0.1704211	val_loss:0.1472387	val_psnr:10.65908	val_ssim:0.22877
+2022-10-24 20:38:45,025 main.py [line:450] INFO:	epoch:36      time:31.06847s	lr:0.00010000	train_loss:0.1883148	val_loss:0.1475070	val_psnr:10.68814	val_ssim:0.23085
+2022-10-24 20:39:16,229 main.py [line:450] INFO:	epoch:37      time:31.13549s	lr:0.00010000	train_loss:0.1824038	val_loss:0.1397580	val_psnr:10.86549	val_ssim:0.23516
+2022-10-24 20:39:47,525 main.py [line:450] INFO:	epoch:38      time:31.22949s	lr:0.00010000	train_loss:0.1768411	val_loss:0.1550708	val_psnr:10.51606	val_ssim:0.22404
+2022-10-24 20:40:19,343 main.py [line:450] INFO:	epoch:39      time:31.74471s	lr:0.00010000	train_loss:0.1748950	val_loss:0.1407945	val_psnr:10.84995	val_ssim:0.23408
+2022-10-24 20:40:50,773 main.py [line:450] INFO:	epoch:40      time:31.36379s	lr:0.00010000	train_loss:0.1709663	val_loss:0.1445253	val_psnr:10.77987	val_ssim:0.23207
+2022-10-24 20:41:22,247 main.py [line:450] INFO:	epoch:41      time:31.40288s	lr:0.00010000	train_loss:0.1759630	val_loss:0.1437552	val_psnr:10.77527	val_ssim:0.23255
+2022-10-24 20:41:53,951 main.py [line:450] INFO:	epoch:42      time:31.63387s	lr:0.00010000	train_loss:0.1777486	val_loss:0.1439977	val_psnr:10.74614	val_ssim:0.22926
+2022-10-24 20:42:26,249 main.py [line:450] INFO:	epoch:43      time:32.22645s	lr:0.00010000	train_loss:0.1719360	val_loss:0.1425822	val_psnr:10.80950	val_ssim:0.23190
+2022-10-24 22:15:29,653 main.py [line:277] INFO:	Running distributed data parallel on 1 gpus.
+2022-10-24 22:15:29,701 distributed_c10d.py [line:228] INFO:	Added key: store_based_barrier_key:1 to store for rank: 0
+2022-10-24 22:15:29,701 distributed_c10d.py [line:263] INFO:	Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+2022-10-24 22:15:30,800 main.py [line:300] INFO:	Load checkpoint at epoch 13.
+2022-10-24 22:15:30,801 main.py [line:301] INFO:	Current learning rate is 0.0001.
+2022-10-24 22:15:30,801 main.py [line:302] INFO:	Current best ssim in train phase is 0.24398557716852906.
+2022-10-24 22:15:30,801 main.py [line:303] INFO:	The model is loaded.
+2022-10-24 22:15:32,812 main.py [line:356] INFO:	Now training self-supervised MRI reconstruction.
+2022-10-24 22:16:14,835 main.py [line:382] INFO:	epoch:14      time:42.02043s	lr:0.00010000	train_loss:0.1768956	val_loss:0.1444049	val_psnr:12.13225	val_ssim:0.45459
+2022-10-24 22:16:55,131 main.py [line:382] INFO:	epoch:15      time:40.19286s	lr:0.00010000	train_loss:0.1776075	val_loss:0.1273694	val_psnr:12.61930	val_ssim:0.46564
+2022-10-24 22:17:35,377 main.py [line:382] INFO:	epoch:16      time:40.14635s	lr:0.00010000	train_loss:0.1787199	val_loss:0.1338660	val_psnr:12.39316	val_ssim:0.45349
+2022-10-24 22:18:16,565 main.py [line:382] INFO:	epoch:17      time:41.12888s	lr:0.00010000	train_loss:0.1715483	val_loss:0.1455046	val_psnr:12.15272	val_ssim:0.46102
+2022-10-24 22:18:57,745 main.py [line:382] INFO:	epoch:18      time:41.12032s	lr:0.00010000	train_loss:0.1839056	val_loss:0.1405040	val_psnr:12.34708	val_ssim:0.46659
+2022-10-24 22:19:38,088 main.py [line:382] INFO:	epoch:19      time:40.25369s	lr:0.00010000	train_loss:0.1826945	val_loss:0.1308434	val_psnr:12.47878	val_ssim:0.45476
+2022-10-24 22:20:18,219 main.py [line:382] INFO:	epoch:20      time:40.07204s	lr:0.00010000	train_loss:0.1799355	val_loss:0.1295575	val_psnr:12.53089	val_ssim:0.45200
+2022-10-24 22:20:58,532 main.py [line:382] INFO:	epoch:21      time:40.25688s	lr:0.00010000	train_loss:0.1887348	val_loss:0.1454876	val_psnr:12.08709	val_ssim:0.44710
+2022-10-24 22:21:38,861 main.py [line:382] INFO:	epoch:22      time:40.26892s	lr:0.00010000	train_loss:0.1805833	val_loss:0.1388272	val_psnr:12.24815	val_ssim:0.44787
+2022-10-24 22:22:19,153 main.py [line:382] INFO:	epoch:23      time:40.23343s	lr:0.00010000	train_loss:0.1709708	val_loss:0.1315155	val_psnr:12.42203	val_ssim:0.44764
+2022-10-24 22:23:00,858 main.py [line:382] INFO:	epoch:24      time:41.64528s	lr:0.00010000	train_loss:0.1644177	val_loss:0.1000228	val_psnr:13.46249	val_ssim:0.45133
+2022-10-24 22:23:41,592 main.py [line:382] INFO:	epoch:25      time:40.67549s	lr:0.00010000	train_loss:0.1666296	val_loss:0.1158851	val_psnr:12.92044	val_ssim:0.45107
+2022-10-24 22:24:22,592 main.py [line:382] INFO:	epoch:26      time:40.93791s	lr:0.00010000	train_loss:0.1617371	val_loss:0.1318386	val_psnr:12.41726	val_ssim:0.44895
+2022-10-24 22:25:02,961 main.py [line:382] INFO:	epoch:27      time:40.31736s	lr:0.00010000	train_loss:0.1827428	val_loss:0.1017113	val_psnr:13.39110	val_ssim:0.45412
+2022-10-24 22:25:44,654 main.py [line:382] INFO:	epoch:28      time:41.63316s	lr:0.00010000	train_loss:0.1485572	val_loss:0.0989008	val_psnr:13.50066	val_ssim:0.45699

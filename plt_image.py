@@ -56,15 +56,15 @@ def pseudo2real(x):
     :param x: [..., C=2, H, W]
     :return: [..., H, W]
     """
-    print('x-shape:',x.shape)
+    # print('x-shape:',x.shape)
     return (x[..., 0, :, :] ** 2 + x[..., 1, :, :] ** 2) ** 0.5
 # helper function: Visualize a sample
 def visualize_data_point(data_point):
     # im_gt = data_point[0]#//////////////////////////////////////
     im_gt=data_point
-    print('im_gt.shape:',im_gt.shape) #im_gt.shape: torch.Size([1, 2, 256, 256])
+    # print('im_gt.shape:',im_gt.shape) #im_gt.shape: torch.Size([1, 2, 256, 256])
     img = pseudo2real(im_gt)
-    print('img.shape:',img.shape)
+    # print('img.shape:',img.shape)
     # save_image(img,f'{results_save_path}/{5}.png')
     imgshow(img,cmap='gray')
 

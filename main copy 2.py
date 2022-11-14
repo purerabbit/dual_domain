@@ -43,8 +43,8 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0'#单GPU进行训练
 parser = argparse.ArgumentParser()
 parser.add_argument('--exp-name', type=str, default='self-supervised MRI reconstruction', help='name of experiment')
 # parameters related to distributed training
-parser.add_argument('--init-method', default=f'tcp://localhost:{np.random.randint(1000,2000)}', help='initialization method')
-# parser.add_argument('--init-method', default=f'tcp://localhost:1883', help='initialization method')
+# parser.add_argument('--init-method', default=f'tcp://localhost:{np.random.randint(1000,2000)}', help='initialization method')
+parser.add_argument('--init-method', default=f'tcp://localhost:1882', help='initialization method')
 parser.add_argument('--nodes', type=int, default=1, help='number of nodes')
 parser.add_argument('--gpus', type=int, default=1, help='number of gpus per node')#放到一块GPU上进行训练
 parser.add_argument('--world-size', type=int, default=None, help='world_size = nodes * gpus')
@@ -192,8 +192,9 @@ def forward(mode, rank, model, dataloader, criterion, optimizer, log, args):
         select_mask_up=select_mask_up.permute(0,3,1,2)
         net_img_down,down_kspace=np_undersample(pseudo2complex(k_und)[0],select_mask_down[0][0])
         net_img_up,up_kspace=np_undersample(pseudo2complex(k_und)[0],select_mask_up[0][0])
-        
-   
+        # print('up_kspace.shape:',up_kspace.shape)#(1, 2, 256, 256)
+        # net_img_up=kspace2image(up_kspace)
+        # net_img_up=kspace2image(down_kspace)
      
         under_img = kspace2image(pseudo2complex(k_und))
         under_kspace = k_und
@@ -203,10 +204,9 @@ def forward(mode, rank, model, dataloader, criterion, optimizer, log, args):
         net_img_up=complex2pseudo(net_img_up)
         net_img_down=complex2pseudo(net_img_down)
         under_img=complex2pseudo(under_img)
-      
+        # net_img_up=torch.from_numpy(net_img_up)
+        # net_img_down=torch.from_numpy(net_img_down)
         
-        
-
         net_img_up=net_img_up.to(rank)
         net_img_down=net_img_down.to(rank)
         net_img_up=net_img_up.to(torch.float32)
@@ -217,36 +217,72 @@ def forward(mode, rank, model, dataloader, criterion, optimizer, log, args):
         net_img_up=net_img_up.repeat(args.batch_size,1,1,1)
         net_img_down=net_img_down.repeat(args.batch_size,1,1,1)
 
-        # test_ssim=compute_ssim(under_img,net_img_up)  #19
-        # test_psnr=compute_psnr(under_img,net_img_up)  # 0.61
-        
-
         if mode == 'test':
             net_img_up = net_img_down = under_img
             select_mask_up = select_mask_down = und_mask
-         
+        # output_up, output_down,output_mid = model(net_img_up.contiguous(), net_img_down.contiguous(),under_img.contiguous(),und_mask.contiguous())#output class 设成1
         output_mid = model(net_img_up.contiguous(), net_img_down.contiguous(),under_img.contiguous(),und_mask.contiguous())#output class 设成1
-       
+        # output_up, output_down= model(net_img_up.contiguous(), net_img_down.contiguous(),under_img.contiguous(),und_mask.contiguous())#output class 设成1
         
-        batch_loss=criterion(torch.abs(pseudo2complex(output_mid)),torch.abs(pseudo2complex(im_gt)))
-       
+        # #保存图像结果部分
+        # if mode=='test':
+        #     itt=output_up.shape[0]
+        #     dimt=output_up.shape[2]
+        #     count=iter_num*itt*dimt      
+        #     im_gt1=im_gt[0,0,:,:]       
+        #     output_up1=output_up[0,0,:,:]   
+        #     img_show=torch.cat((im_gt1,pseudo2real(under_img).squeeze(),output_up1),0)
+        #     count=iter_num+count
+        #     save_image(img_show,f'{results_save_path}/{count}.png')
+
+        # output_up_kspace = complex2pseudo(image2kspace(pseudo2complex(output_up)))
+        # output_down_kspace = complex2pseudo(image2kspace(pseudo2complex(output_down)))
+        batch_loss=criterion(output_mid,im_gt)
+        # output_mid_kspace = complex2pseudo(image2kspace(pseudo2complex(output_mid)))
+        # gt_kspace = complex2pseudo(image2kspace(pseudo2complex(im_gt)))
+
+        # SSDU loss
+        # diff_otherf = (output_up_kspace - output_down_kspace) * (1 - und_mask)
+        
+        # recon_loss_up=0.0
+        # recon_loss_down=0.0
+    
+        # # for i in range(nnt):
+        # output_up_kspace_mask=output_up_kspace * und_mask
+        # recon_loss_up=criterion(output_up_kspace_mask,under_kspace)#fully sampled/////////////////////////////
+        # output_down_kspace_mask = output_down_kspace * und_mask
+        # recon_loss_down = criterion(output_down_kspace_mask, under_kspace)#fully sampled/////////////////////////////
+        
+        # diff_loss = criterion(diff_otherf, torch.zeros_like(diff_otherf))
+        # # print('diff_loss*0,01:',diff_loss*0.01)
+        # batch_loss =recon_loss_up + recon_loss_down + 0.01 * diff_loss
+        # print(batch_loss)
+
+        # # dual domain loss
+        # y1,y2,yu,y=output_up_kspace* und_mask,output_down_kspace* und_mask,output_mid_kspace* und_mask,under_kspace
+        # x1,x2,xu,x= output_up,output_down,output_mid,under_img
+        
+        # batch_loss=cal_loss(y,y1,y2,yu,x,x1,x2,xu)
+
+        # #supervised loss
+
+        # batch_loss=criterion(output_up_kspace, gt_kspace)+criterion(output_mid_kspace, gt_kspace)+criterion(output_down_kspace, gt_kspace)
+        # batch_loss=criterion(output_up_kspace, gt_kspace)+criterion(output_mid_kspace, gt_kspace)+criterion(output_down_kspace, gt_kspace)
+        # batch_loss=criterion(output_up_kspace, k_und)+criterion(output_mid_kspace, k_und)+criterion(output_down_kspace, k_und)
+
+        
+         #保存生成的数据
+        # if(save_excel!=[]):
+        #     print('come into save_excel')
+        #     result=pd.DataFrame(save_excel)
+        #     result.to_excel("ssim_psnr.xlsx",float_format='%.5f')
         if mode == 'train':
             optimizer.zero_grad()
             batch_loss.backward()
-
-            optimizer.step()
-     
-        else:
             
+            optimizer.step()
+        else:
             #评估指标
-              # #保存图像结果部分    
-            im_gt1=im_gt[0,0,:,:]       
-            output_up1=output_mid[0,0,:,:]   
-            img_show=torch.cat((im_gt1,pseudo2real(under_img).squeeze(),output_up1),0)
-            count=iter_num+count
-            SSIM1=compute_ssim(output_mid,im_gt)
-            save_image(img_show,f'/home/liuchun/sever04_dual_code/results_img/img_val/{str(SSIM1)}.png')
-
             ssim+=compute_ssim(output_mid,im_gt)
             psnr+=compute_psnr(output_mid,im_gt)
            
@@ -261,10 +297,8 @@ def forward(mode, rank, model, dataloader, criterion, optimizer, log, args):
         result.to_excel("ssim_psnr_new.xlsx",float_format='%.5f')
 
     if mode == 'train':
-        # curr_lr = optimizer.param_groups[0]['initial_lr']
-        curr_lr = 0.0001
+        curr_lr = optimizer.param_groups[0]['initial_lr']
         log.append(curr_lr)
-       
     else:
         psnr /= len(dataloader)
         ssim /= len(dataloader)
@@ -317,7 +351,7 @@ def solvers(rank, ngpus_per_node, args):
     # criterion, optimizer, learning rate scheduler
     #损失函数部分 根据论文进行改变
     criterion = nn.MSELoss()
-    optimizer = optim.Adam(model.parameters(), lr=args.lr,weight_decay=1e-5)
+    optimizer = optim.Adam(model.parameters(), lr=args.lr,weight_decay=1e-7)
     if not args.pretrained:
         warm_up = lambda epoch: epoch / args.warmup_epochs if epoch <= args.warmup_epochs else 1
         scheduler_wu = torch.optim.lr_scheduler.LambdaLR(optimizer=optimizer, lr_lambda=warm_up)
@@ -326,7 +360,7 @@ def solvers(rank, ngpus_per_node, args):
 
     #数据集部分
     # dataset1 = FastmriKnee('/home/liuchun/dual_net/dual_domain/data/knee_singlecoil_train_6300_n.npz')
-    dataset1 = FastmriKnee('/home/liuchun/ssim_net/dual_domain/data/knee_singlecoil_360.npz')
+    dataset1 = FastmriKnee('/home/liuchun/sever04_dual_code/dual_domain/data/knee_singlecoil_1000_nor.npz')
     # print('dataset1:',len(dataset1))
     dataset=DatasetReconMRI(dataset1)
     # print('dataset:',len(dataset))

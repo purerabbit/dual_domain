@@ -188,11 +188,8 @@ class DatasetReconMRI(Data.Dataset):
         C, H, W = im_gt.shape
         und_mask = cartesian_mask(shape=(1, H, W, 1), acc=self.acc, sample_n=self.num_center_lines, centred=True
                                   ).astype(np.float32)[0, :, :, 0]  # [H, W]
-        # k0 = image2kspace(pseudo2real(im_gt))
-        k0 = image2kspace(pseudo2complex(im_gt))
-        
-        x_und, k_und = np_undersample(k0, und_mask) #x_und:(256, 256) complex64 <-> k_und
-
+        k0 = image2kspace(pseudo2real(im_gt))
+        x_und, k_und = np_undersample(k0, und_mask)
 
         EPS = 1e-8
         x_und_abs = np.abs(x_und)
@@ -211,7 +208,7 @@ class DatasetReconMRI(Data.Dataset):
         )
 
     def __len__(self):
-         
+        # print('self.n_slices-DatasetReconMRI',self.n_slices)
         return self.n_slices
 
 
